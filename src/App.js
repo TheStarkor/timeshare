@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import { Provider as StoreProvider } from "react-redux";
+import axios from "axios";
+import { useCookies } from "react-cookie";
+
+import "antd/dist/antd.css";
+
+import Router from "./router";
+import store from "./store";
 
 function App() {
+  const [cookies] = useCookies(["Authorization"]);
+
+  // axios.defaults.baseURL =
+  //   "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com";
+  axios.defaults.baseURL = "http://localhost:8000";
+  axios.interceptors.request.use((config) => {
+    // TODO
+    // if (process.env.REACT_APP_STAGE === 'dev') {
+    //   config.baseURL = process.env.REACT_APP_DEV_BASE_URL
+    // } else if (process.env.REACT_APP_STAGE === 'prod') {
+    //   config.baseURL = process.env.REACT_APP_PROD_BASE_URL
+    // }
+    config = config || {};
+    config.headers = config.headers || {};
+    config.headers.Authorization = cookies.Authorization;
+
+    return config;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider store={store}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </StoreProvider>
   );
 }
 
