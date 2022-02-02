@@ -40,11 +40,11 @@ const Mypage = () => {
     }
   };
 
-  const handleChange = (info) => {
-    if (info.file.response) {
-      setImageUrl(info.file.response.uri);
-    }
-  };
+  // const handleChange = (info) => {
+  //   if (info.file.response) {
+  //     setImageUrl(info.file.response.uri);
+  //   }
+  // };
 
 
   return (
