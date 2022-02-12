@@ -122,14 +122,14 @@ const Signup = () => {
               <Input />
             </Form.Item>
             <Form.Item
-              label="StudnetId"
+              label="학번 / 학과"
               name="studentId"
               rules={[{ required: true, message: "학번을 입력해주세요!" }]}
             >
               <Input />
             </Form.Item>
             <Form.Item
-              label="자기소개"
+              label="현재 소속 및 업무"
               name="description"
               rules={[{ required: true, message: "자기소개를 입력해주세요!" }]}
             >

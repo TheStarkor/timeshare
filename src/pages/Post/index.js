@@ -31,6 +31,8 @@ const Post = () => {
           <PostCard 
             id={post?.id}
             key={`posts-list-card-${post.id}`}
+            type={post?.type}
+            status={post?.status}
             title={post?.title}
             content={post?.content}
             user={post?.User}

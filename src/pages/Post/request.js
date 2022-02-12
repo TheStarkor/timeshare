@@ -53,7 +53,7 @@ const PostRequest = () => {
           <Form.Item label="type">
             {post?.type === 1 ? '만남 요청' : '공유 제안'}
           </Form.Item>
-          <Form.Item label={post?.type === 1 ? '원하는 내용을 작성해주세요' : '줄 수 있는 정보와 비용을 작성해주세요'} name="content" rules={[{ required: true, message: '내용을 입력해 주세요!' }]}>
+          <Form.Item label={post?.type === 1 ? '원하는 내용을 작성해주세요' : '줄 수 있는 정보와 비용을 작성해주세요'} name="reason" rules={[{ required: true, message: '내용을 입력해 주세요!' }]}>
             <Input.TextArea placeholder="이유를 작성해주세요" />
           </Form.Item>
           <Form.Item>

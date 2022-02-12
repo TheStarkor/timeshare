@@ -6,12 +6,12 @@ import { Form, Input, Button, Upload, Alert } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
 import { GET_ME_REQUEST } from "../../reducers/user";
+import { requestStatusParser } from "../../utils/parser";
 
 const Mypage = () => {
   const { user } = useSelector(state => state);
   const [isError, setError] = useState(false);
   const dispatch = useDispatch();
-  const [imageUrl, setImageUrl] = useState("");
 
   console.log(user);
 
@@ -45,6 +45,8 @@ const Mypage = () => {
   //     setImageUrl(info.file.response.uri);
   //   }
   // };
+
+  console.log(user)
 
 
   return (
@@ -102,6 +104,15 @@ const Mypage = () => {
               </Button>
             </Form.Item>
           </Form>
+        </div>
+        <div>
+          보낸 요청
+          {user.data.Requests.map(request => (
+            <>
+              <div>{request.reason}</div>
+              <div>{requestStatusParser(request.status)}</div>
+            </>
+          ))}
         </div>
       </div>}
     </>

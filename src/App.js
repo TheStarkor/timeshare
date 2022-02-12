@@ -7,13 +7,15 @@ import "antd/dist/antd.css";
 
 import Router from "./router";
 import store from "./store";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [cookies] = useCookies(["Authorization"]);
 
-  // axios.defaults.baseURL =
-  //   "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com";
-  axios.defaults.baseURL = "http://localhost:8000";
+  axios.defaults.baseURL =
+    "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com/";
+  // axios.defaults.baseURL = "http://localhost:8000";
   axios.interceptors.request.use((config) => {
     // TODO
     // if (process.env.REACT_APP_STAGE === 'dev') {
@@ -30,9 +32,11 @@ function App() {
 
   return (
     <StoreProvider store={store}>
+      <Header />
       <BrowserRouter>
         <Router />
       </BrowserRouter>
+      <Footer />
     </StoreProvider>
   );
 }

@@ -7,6 +7,7 @@ import axios from 'axios';
 import { GET_ME_REQUEST } from "../../reducers/user";
 import LogoutButton from '../../components/LogoutButton';
 import PostCard from '../../components/postCard';
+import Landing from './landing';
 
 const Home = () => {
   const { user } = useSelector(state => state);
@@ -45,9 +46,27 @@ const Home = () => {
             Mypage
           </Link>
           <div>
-            <div>게시물 목록</div>
             <Link to="/posts">More</Link>
+            <br/>
+            <Link to="/post/new">
+              새로 만들기
+            </Link>
+            <div>시간을 공유해요</div>
             {posts && posts.map(post => (
+              post.type === 1 &&
+              <PostCard 
+                id={post?.id}
+                key={`posts-list-card-${post.id}`}
+                type={post?.type}
+                status={post?.status}
+                title={post?.title}
+                content={post?.content}
+                user={post?.User}
+              />
+            ))}
+            <div>시간을 공유받고 싶어요</div>
+            {posts && posts.map(post => (
+              post.type === 2 &&
               <PostCard 
                 id={post?.id}
                 key={`posts-list-card-${post.id}`}
@@ -60,14 +79,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        : 
-        <div>
-          로그인을 해주세요
-
-          <Link to="/login">
-            <div className="login-link-to-join"> LOGIN </div>
-          </Link>
-        </div>}
+        : <Landing />}
     </>
   )
 }

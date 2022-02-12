@@ -7,5 +7,11 @@ module.exports = {
   postTypeParser: (type) => {
     if (type === 1) return '공유하고 싶어요';
     else return ' 만나고 싶어요';
+  },
+  requestStatusParser: (status) => {
+    if (status === 0) return '대기중';
+    else if (status === 1) return '승락';
+    else if (status === 2) return '거절';
+    else return '에러'
   }
 }
