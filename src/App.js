@@ -3,6 +3,7 @@ import { Provider as StoreProvider } from "react-redux";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
+import "./index.css"
 import "antd/dist/antd.css";
 import FontAwesome from "./commons/FontAwesome";
 
