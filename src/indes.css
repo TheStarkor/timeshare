@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: NanumSquareL;
+    src: url('../src/commons/fonts/NanumSquareL.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: NanumSquareR;
+    src: url('../src/commons/fonts/NanumSquareR.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: NanumSquareB;
+    src: url('../src/commons/fonts/NanumSquareB.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: NanumSquareEB;
+    src: url('../src/commons/fonts/NanumSquareEB.ttf') format('truetype');    
+}
+
+*{
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+  

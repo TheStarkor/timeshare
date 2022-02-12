@@ -1,0 +1,121 @@
+.container{
+	font-family: NanumSquareB;
+	font-size: 20px;
+	.landing0{
+		width:100%;
+		background: white;
+		padding:100px 10% 40px 10%;
+
+		display: flex;
+		flex-direction: column;
+		
+		.landing0_text1{
+			font-size:36px;
+			
+			.highlight{
+				color:#2257F6;
+			}
+			.landing0_image{
+				width: 36px;
+				height: 36px;
+				margin-left: 10px;
+			}
+		}			
+		.landing0_text2{
+			font-family: NanumSquareR;
+			font-size:16px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}	
+	}
+	.landing1{
+		width:100%;
+		background: linear-gradient(white, #D1DDFF);
+		padding-bottom: 80px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		.landing1_text{
+			width: 100%;
+			padding:100px 10% 40px 10%;
+		}				
+		.landing1_image{
+			height: 200px;
+		}
+	}
+	.landing2{
+		width:100%;
+		background: white;
+		padding-bottom: 50px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		.landing2_text{
+			width: 100%;
+			padding:80px 10% 80px 10%;
+		}				
+		.landing2_image{
+			height: 260px;
+		}
+	}
+	.landing3{
+		width:100%;
+		background: #2257F6;
+		padding:120px 10% 120px 10%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		.landing3_text_container{
+			color:white;
+			width: 400px;	
+			.landing3_text1{
+				font-size:12px;
+				margin-bottom: 30px;
+			}	
+			.landing3_text2{
+				font-family: NanumSquareR;
+				font-size:16px;
+				margin-bottom: 20px;
+				margin-top: 30px;
+			}	
+		}				
+		.landing3_image{
+			margin-left:80px;
+			width: 390px;
+		}
+	}
+	.landing4{
+		width:100%;
+		background: black;
+		padding:120px 10% 120px 10%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		.landing4_text_container{
+			color:white;	
+			width: 400px;	
+			.landing4_text1{
+				font-size:12px;
+				margin-bottom: 30px;
+			}	
+			.landing4_text2{
+				font-family: NanumSquareR;
+				font-size:16px;
+				margin-bottom: 20px;
+				margin-top: 30px;
+			}	
+		}				
+		.landing4_image{
+			margin-left:80px;
+			width: 390px;
+		}
+	}
+}
