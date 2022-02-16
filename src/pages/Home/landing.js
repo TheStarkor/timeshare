@@ -7,7 +7,7 @@ const Landing = () => {
   const [isMobile, setisMobile] = useState(false);
 
   const resizingHandler = () => {
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1200) {
       setisMobile(true);
     } else {
       setisMobile(false);
@@ -16,7 +16,7 @@ const Landing = () => {
 
   // 우선 맨 처음 1023이하면 모바일 처리
   useEffect(() => {
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1200) {
       setisMobile(true);
       console.log(isMobile)
     }
