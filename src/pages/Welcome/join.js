@@ -18,7 +18,7 @@ const Signup = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [form] = Form.useForm();
 
-  const onGenderChange = (value: string) => {
+  const onGenderChange = (value) => {
     switch (value) {
       case 'male':
         form.setFieldsValue({ note: 'Hi, man!' });
