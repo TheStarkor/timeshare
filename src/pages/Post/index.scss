@@ -53,17 +53,82 @@
 @include tablet{
 	.post-container{
 		display: flex;
-		justify-content: center;
-		padding:50px;
+		flex-direction: column;
+		overflow-y: scroll;
+		// justify-content: center;
+		align-items: center;
+		padding: 120px 50px;
+
+		font-family: NanumSquareB;
+		.postList-title-container{
+			padding-right: 20px;
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.more{
+				color: #A0A0A0;
+				font-family: NanumSuareR;
+			}
+		}
 		.postList-container{
 			display: flex;
+			// align-self: center;
+			width:1120px;
+			flex-flow: wrap;
+			margin-bottom: 80px;
+			.plusCard-container{
+				font-family: NanumSquareB;
+				font-size:18px;
+
+				width:260px;
+				height:280px;
+				border-radius: 15px;
+				border: solid 2px #e5e5e5;
+				background: #F8F8F8;
+				box-shadow: 0px 0px 16px 2px #00000010; 
+
+				display: flex;
+				align-items: center;
+				justify-content: center; 
+
+				margin: 0 20px 20px 0;
+			}
+		}
+	}
+}
+
+@include tablet{
+	.post-container{
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		justify-content: center;
+		padding:50px;
+
+
+		font-family: NanumSquareB;
+		.postList-title-container{
+			padding-right: 20px;
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.more{
+				color: #A0A0A0;
+				font-family: NanumSuareR;
+			}
+		}
+		.postList-container{
+			display: flex;
+			width: 100%;
 			flex-flow: wrap;
 			.plusCard-container{
 				font-family: NanumSquareB;
 				font-size:18px;
 
 				width:260px;
-				height:260px;
+				height:280px;
 				border-radius: 15px;
 				border: solid 2px #e5e5e5;
 				background: #F8F8F8;
