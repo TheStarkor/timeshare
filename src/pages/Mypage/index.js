@@ -8,6 +8,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { GET_ME_REQUEST } from "../../reducers/user";
 import { requestStatusParser } from "../../utils/parser";
 import PostCard from "../../components/postCard/postCard";
+import LogoutButton from "../../components/LogoutButton";
 
 const Mypage = () => {
   const { user } = useSelector(state => state);
@@ -141,6 +142,7 @@ const Mypage = () => {
           <>작성한 게시글이 없습니다.</>}
         </div>
       </div>}
+      로그아웃 <LogoutButton />
     </>
   )
 }
