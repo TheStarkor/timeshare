@@ -35,8 +35,8 @@ function App() {
 
   return (
     <StoreProvider store={store}>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Router />
       </BrowserRouter>
       {/* <Footer /> */}

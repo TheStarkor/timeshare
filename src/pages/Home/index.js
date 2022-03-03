@@ -8,6 +8,7 @@ import { GET_ME_REQUEST } from "../../reducers/user";
 import LogoutButton from '../../components/LogoutButton';
 import PostCard from '../../components/postCard/postCard';
 import Landing from './landing';
+import Post from '../Post';
 
 const Home = () => {
   const { user } = useSelector(state => state);
@@ -38,47 +39,7 @@ const Home = () => {
   return (
     <>
       {user.data
-        ? 
-        <div>
-          { user.data.nickname }님 안녕하세요
-          <LogoutButton />
-          <Link to="/me">
-            Mypage
-          </Link>
-          <div>
-            <Link to="/posts">More</Link>
-            <br/>
-            <Link to="/post/new">
-              새로 만들기
-            </Link>
-            <div>시간을 공유해요</div>
-            {posts && posts.map(post => (
-              post.type === 1 &&
-              <PostCard 
-                id={post?.id}
-                key={`posts-list-card-${post.id}`}
-                type={post?.type}
-                status={post?.status}
-                title={post?.title}
-                content={post?.content}
-                user={post?.User}
-              />
-            ))}
-            <div>시간을 공유받고 싶어요</div>
-            {posts && posts.map(post => (
-              post.type === 2 &&
-              <PostCard 
-                id={post?.id}
-                key={`posts-list-card-${post.id}`}
-                type={post?.type}
-                status={post?.status}
-                title={post?.title}
-                content={post?.content}
-                user={post?.User}
-              />
-            ))}
-          </div>
-        </div>
+        ? <Post />
         : <Landing />}
     </>
   )

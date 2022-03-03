@@ -23,13 +23,10 @@ const PostCard = (props) => {
             ?
             <>
               {props.tag.map(item => (
-                <div>{item}</div>
+                <div className="tag-box">{item}</div>
               ))}
             </>
             : <></>}
-          <div className="tag-box">{`${props?.class}`}</div>
-          <div className="tag-box">{`${props?.class}`}</div>
-          <div className="tag-box">{`${props?.class}`}</div>
           <div className="tag-class">{`${props?.class}`}</div>
           <div className="tag-price">{`${props?.price}`}</div>
         </div>

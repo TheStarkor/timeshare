@@ -7,13 +7,12 @@ import { PlusOutlined } from "@ant-design/icons";
 
 import { GET_ME_REQUEST } from "../../reducers/user";
 import { requestStatusParser } from "../../utils/parser";
+import PostCard from "../../components/postCard/postCard";
 
 const Mypage = () => {
   const { user } = useSelector(state => state);
   const [isError, setError] = useState(false);
   const dispatch = useDispatch();
-
-  console.log(user);
 
   const onFinish = async (values) => {
     try {
@@ -39,15 +38,6 @@ const Mypage = () => {
       setError(true);
     }
   };
-
-  // const handleChange = (info) => {
-  //   if (info.file.response) {
-  //     setImageUrl(info.file.response.uri);
-  //   }
-  // };
-
-  console.log(user)
-
 
   return (
     <>
@@ -106,13 +96,49 @@ const Mypage = () => {
           </Form>
         </div>
         <div>
-          보낸 요청
-          {user.data.Requests.map(request => (
+          {/* 학과, 소속 추가 필요 */}
+          <img src={user?.data.profileImageUrl} alt="avatar" style={{ width: "10%" }} />
+
+          <div>{`학과 ${null}`}</div> 
+          <div>{`현재 소속 ${null}`}</div>
+          <div>{`자기소개 ${user?.data?.description}`}</div>
+          <div>{`연락처 ${user?.data?.phoneNumber} / ${user?.data?.email}`}</div>
+        </div>
+        <div>
+          <h1>보낸 요청</h1>
+          {user.data.Requests.length !== 0
+          ?
+          user.data.Requests.map(request => (
             <>
               <div>{request.reason}</div>
               <div>{requestStatusParser(request.status)}</div>
             </>
-          ))}
+          ))
+          : <>요청이 없습니다.</>
+          }
+        </div>
+        <div>
+          <h1>게시글</h1>
+          {user?.data?.Posts?.length !== 0
+          ? 
+          user?.data?.Posts.map(post => (
+            <>
+              <PostCard
+                  id={post?.id}
+                  key={`posts-list-card-${post?.id}`}
+                  type={post?.type}
+                  status={post?.status}
+                  title={post?.title}
+                  content={post?.content}
+                  user={post?.User}
+                  tag={post?.tag}
+                  class={post?.class}
+                  price={post?.price}
+              />
+            </>
+          ))
+          :
+          <>작성한 게시글이 없습니다.</>}
         </div>
       </div>}
     </>

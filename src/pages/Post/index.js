@@ -7,19 +7,22 @@ import { AiOutlinePlus } from "react-icons/ai";
 import './index.scss'
 
 const Post = () => {
-  // const [posts, setPosts] = useState(null);
+  // const [p, setPosts] = useState(null);
 
-  // useEffect(() => {
-  //   axios.get('/posts')
-  //     .then(res => {    
-  //       setPosts(res.data);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     })
-  // }, []);
+  useEffect(() => {
+    axios.get('/posts')
+      .then(res => {
+        console.log(res.data);    
+        // setPosts(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }, []);
+
   const posts = [
     {
+      "id": 1,
       "type" : "타입",
       "title" : "삼성전자에 근무하고 있는 UX 디자이너입니다.",
       "class" : "산업디자인학과",
@@ -27,6 +30,7 @@ const Post = () => {
       "tag" :  ["삼성전자", "UX디자이너" ]
     },
     {
+      "id": 2,
       "type" : "타입",
       "title" : "삼성전자에 근무하고 있는 UX 디자이너입니다.",
       "class" : "산업디자인학과",
@@ -34,6 +38,7 @@ const Post = () => {
       "tag" :  ["삼성전자", "UX디자이너" ]
     },
     {
+      "id": 3,
       "type" : "타입",
       "title" : "삼성전자에 근무하고 있는 UX 디자이너입니다.",
       "class" : "산업디자인학과",
@@ -62,12 +67,15 @@ const Post = () => {
               {posts.map(post => (
                 <PostCard 
                   id={post?.id}
-                  key={`posts-list-card-${post.id}`}
+                  key={`posts-list-card-${post?.id}`}
                   type={post?.type}
                   status={post?.status}
                   title={post?.title}
                   content={post?.content}
                   user={post?.User}
+                  tag={post?.tag}
+                  class={post?.class}
+                  price={post?.price}
                 />
               ))}
             </>
