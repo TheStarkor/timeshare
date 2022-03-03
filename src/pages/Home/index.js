@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import { GET_ME_REQUEST } from "../../reducers/user";
 import LogoutButton from '../../components/LogoutButton';
-import PostCard from '../../components/postCard';
+import PostCard from '../../components/postCard/postCard';
 import Landing from './landing';
 
 const Home = () => {
