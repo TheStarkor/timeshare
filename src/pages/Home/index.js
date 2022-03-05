@@ -40,9 +40,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      {user.data
-        ? <Post />
-        : <Landing />}
+      <Landing />
     </>
   )
 }
