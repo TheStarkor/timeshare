@@ -64,7 +64,7 @@ const Signup = () => {
         path: "/",
         maxAge: 24 * 60 * 60,
       });
-      window.location.href = "/";
+      window.location.href = "/end";
     } catch (error) {
       setError(true);
     }
@@ -212,9 +212,9 @@ const Signup = () => {
 
               {isError && <Alert message="닉네임이 중복됩니다." type="error" />}
               <div className="join-and-login">
-                <Link to="/">
+                {/* <Link to="/">
                   <div className="link-to-login">로그인</div>
-                </Link>
+                </Link> */}
                 <Form.Item>
                   <Button type="primary" htmlType="submit">
                     회원가입

@@ -18,6 +18,7 @@ import PostRequest from "../pages/Post/request";
 // import ReviewNew from "../pages/Review/new";
 
 import { GET_ME_REQUEST } from "../reducers/user";
+import End from "../pages/Welcome/end";
 
 const Router = () => {
   // const { user } = useSelector(state => state);
@@ -36,15 +37,16 @@ const Router = () => {
     <Suspense>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/me" element={<Mypage />} />
+        {/* <Route exact path="/me" element={<Mypage />} />
 
-        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/login" element={<Login />} /> */}
         <Route exact path="/join" element={<Join />} />
+        <Route exact path="/end" element={<End />} />
 
-        <Route exact path="/posts" element={<Post />} />
+        {/* <Route exact path="/posts" element={<Post />} />
         <Route exact path="/post/:id" element={<PostShow />} />
         <Route exact path="/post/new" element={<PostNew />} />
-        <Route exact path="/post/:id/request" element={<PostRequest />} />
+        <Route exact path="/post/:id/request" element={<PostRequest />} /> */}
 
         {/* <Route exact path="/review/:id" element={<Review />} />
         <Route exact path="/review/new" element={<ReviewNew />} /> */}

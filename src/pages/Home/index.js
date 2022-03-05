@@ -9,6 +9,7 @@ import LogoutButton from '../../components/LogoutButton';
 import PostCard from '../../components/postCard/postCard';
 import Landing from './landing';
 import Post from '../Post';
+import Header from '../../components/Header';
 
 const Home = () => {
   const { user } = useSelector(state => state);
@@ -38,6 +39,7 @@ const Home = () => {
 
   return (
     <>
+      <Header />
       {user.data
         ? <Post />
         : <Landing />}
