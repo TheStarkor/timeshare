@@ -36,7 +36,7 @@ const Landing = () => {
             <div className="landing0_text1">
               선배님,<br />
               <span className="highlight">밥 한끼 </span>
-              하실래요? 🍚
+              하실래요?
               <img className="landing0_image" src="https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644694766874%E1%84%87%E1%85%A1%E1%86%B8.png" />
             </div>
             <div className="landing0_text2">
