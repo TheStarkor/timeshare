@@ -2,7 +2,7 @@ name: master
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, feature/pre-open ]
 
 jobs:
   build:
