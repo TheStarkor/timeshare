@@ -6,7 +6,7 @@ import { Form, Input, Button, Upload, Alert, Select } from "antd";
 import { Link } from "react-router-dom";
 import { PlusOutlined } from "@ant-design/icons";
 
-import "./index.scss";
+import "./end.scss";
 
 const { Option } = Select;
 
@@ -16,8 +16,8 @@ const End = () => {
 
   return (
     <>
-      <div className="signup-container">
-        <div className="signup-box">
+      <div className="end-container">
+        <div className="end-box">
           <div className="end-text1">
             사전가입 완료 🙌
           </div>
