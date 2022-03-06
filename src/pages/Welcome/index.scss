@@ -1,95 +1,536 @@
-.signup-container{
-  background: #EEF2FF;
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 0 80px 0;
+@import "../mixins";
 
-  font-family: NanumSquareR;
-  font-size: 12px;
-  
-  .signup-box{
-    background: white;
-    border-radius: 20px;
+@include desktop{
+  .signup-container{
+    background: #EEF2FF;
     display: flex;
-    flex-direction: column;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    padding:60px 80px;
-    .greeting-text1{
-      font-family: NanumSquareEB;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    .greeting-text2{
-      font-size: 12px;
-      color:#656565;
-      margin-bottom: 20px;
-    }
+    padding: 80px 0 80px 0;
 
-    .end-text1{
-      font-family: NanumSquareEB;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    .end-text2{
-      font-size: 12px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .end-text3{
-      font-size: 12px;
-      margin-bottom: 30px;
-    }
-    .end-text4{
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
+    font-family: NanumSquareR;
+    font-size: 12px;
+    
+    .signup-box{
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding:60px 80px;
+      .greeting-text1{
+        font-family: NanumSquareEB;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .greeting-text2{
+        font-size: 12px;
+        color:#656565;
+        margin-bottom: 20px;
+      }
 
-    .signup-form-container{
-      .ant-form{
+      .end-text1{
+        font-family: NanumSquareEB;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .end-text2{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .end-text3{
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+      .end-text4{
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+
+      .signup-form-container{
+        .ant-form{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .ant-upload.ant-upload-select-picture-card{
+            margin:0;
+            border-radius: 10px;
+            border: 1px solid #d9d9d9;
+
+            img{
+              min-width: 102px;
+              min-height: 102px;              
+              height: 102px;
+              width: 102px;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
+          .form-container{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+            .form-name{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:150px;
+                margin-right:20px;
+                }          
+              }
+            }
+            .form-studentnumber{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:60px;
+                margin-right: 20px;
+                }          
+              }
+            }
+            .form-subject{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:130px;
+                }          
+              }
+            }
+
+            .form-email{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width: 290px;
+                margin-right: 20px;
+                }          
+              }
+            }
+            .form-gender{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-select-selector{
+                width: 70px;
+                border-radius: 5px;
+                }          
+              }
+            }
+            .form-pw{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+              .ant-input-affix-wrapper {
+                  width:70px;
+                  width:180px;
+                  border-radius: 5px;
+                  margin-right: 20px;
+                }          
+              }
+            }
+            .form-phone{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                  width:180px;
+                  border-radius: 5px;
+                }          
+              }
+            }
+            .form-work{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width: 380px;
+                }          
+              }
+            }
+            
+          }
+          .join-and-login{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .link-to-login{
+              font-size: 12px;
+              color:#2257F6;
+              margin-right: 20px;
+            }            
+
+            .ant-form-item{
+              margin-bottom: 0;
+              .ant-btn-primary{
+                width:100px;
+                height:40px;
+                font-size: 12px;
+                border-radius: 10px;
+                background: #2257F6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet{
+  .signup-container{
+    background: #EEF2FF;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 80px 0;
+
+    font-family: NanumSquareR;
+    font-size: 12px;
+    
+    .signup-box{
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding:60px 80px;
+      .greeting-text1{
+        font-family: NanumSquareEB;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .greeting-text2{
+        font-size: 12px;
+        color:#656565;
+        margin-bottom: 20px;
+      }
+
+      .end-text1{
+        font-family: NanumSquareEB;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .end-text2{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .end-text3{
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+      .end-text4{
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+
+      .signup-form-container{
+        .ant-form{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .ant-upload.ant-upload-select-picture-card{
+            margin:0;
+            border-radius: 10px;
+            border: 1px solid #d9d9d9;
+
+            img{
+              min-width: 102px;
+              min-height: 102px;              
+              height: 102px;
+              width: 102px;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
+          .form-container{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+            .form-name{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:150px;
+                margin-right:20px;
+                }          
+              }
+            }
+            .form-studentnumber{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:60px;
+                margin-right: 20px;
+                }          
+              }
+            }
+            .form-subject{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:130px;
+                }          
+              }
+            }
+
+            .form-email{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width: 290px;
+                margin-right: 20px;
+                }          
+              }
+            }
+            .form-gender{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-select-selector{
+                width: 70px;
+                border-radius: 5px;
+                }          
+              }
+            }
+            .form-pw{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+              .ant-input-affix-wrapper {
+                  width:70px;
+                  width:180px;
+                  border-radius: 5px;
+                  margin-right: 20px;
+                }          
+              }
+            }
+            .form-phone{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                  width:180px;
+                  border-radius: 5px;
+                }          
+              }
+            }
+            .form-work{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width: 380px;
+                }          
+              }
+            }
+            
+          }
+          .join-and-login{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .link-to-login{
+              font-size: 12px;
+              color:#2257F6;
+              margin-right: 20px;
+            }            
+
+            .ant-form-item{
+              margin-bottom: 0;
+              .ant-btn-primary{
+                width:100px;
+                height:40px;
+                font-size: 12px;
+                border-radius: 10px;
+                background: #2257F6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile{
+  .signup-container{
+    // background: #EEF2FF;
+    // display: flex;
+    // width: 100%;
+    // height: 100vh;
+    // // align-items: center;
+    // justify-content: center;
+    font-family: NanumSquareR;
+    font-size: 12px;
+    
+    .signup-box{
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 31px 60px 31px;
+      // justify-content: center;
+      .greeting-text1{
+        font-family: NanumSquareEB;
+        font-size: 18px;
+        z-index: 1;
+        position: fixed;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .ant-upload.ant-upload-select-picture-card{
-          margin:0;
-          border-radius: 10px;
-          border: 1px solid #d9d9d9;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height:105px;
+        background: white;
+        border-bottom: solid 1px #00000030;
+      }
+      .greeting-text2{
+        height:145px;
+      }
 
-          img{
-            min-width: 102px;
-            min-height: 102px;
-            border-radius: 10px;
-          }
-        }
-        .form-container{
-          width: 100%;
+      .end-text1{
+        font-family: NanumSquareEB;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .end-text2{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .end-text3{
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+      .end-text4{
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+
+      .signup-form-container{
+        .ant-form{
           display: flex;
-          justify-content: flex-start;
+          flex-direction: column;
+          align-items: center;
+          .ant-upload.ant-upload-select-picture-card{
+            margin:0;
+            border-radius: 10px;
+            border: 1px solid #d9d9d9;
 
-          .form-name{
-            .ant-form-item{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; 
-              .ant-input{
-              border-radius: 5px;
-              width:160px;
-              margin-right:20px;
-              }          
+            img{
+              min-width: 102px;
+              min-height: 102px;
+              height: 102px;
+              width: 102px;
+              object-fit: cover;
+              border-radius: 10px;
             }
           }
-          .form-studentnumber{
-            .ant-form-item{
+          .form-container{
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start; 
-              .ant-input{
-              border-radius: 5px;
-              width:200px;
-              }          
+            justify-content: flex-start;
+
+            .form-name{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:210px;
+                height:45px;
+                margin-right:20px;
+                }          
+              }
             }
+            .form-subject{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:210px;
+                height:45px;
+                
+                margin-right:20px;
+                }          
+              }
+            }
+            .form-studentnumber{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; 
+                .ant-input{
+                border-radius: 5px;
+                width:105px;
+                height:45px;
+                }          
+              }
+            }
+            .form-gender{
+              .ant-form-item{
+              display: flex;
+              flex-direction: column;
+              align-items: center; 
+                .ant-select-selector{
+                width: 105px;
+                height:45px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                }          
+              }
+            }             
           }
 
           .form-email{
@@ -99,32 +540,21 @@
             align-items: flex-start; 
               .ant-input{
               border-radius: 5px;
-              width: 290px;
-              margin-right: 20px;
+              width: 328px;
+              height:45px;
               }          
             }
           }
-          .form-gender{
-            .ant-form-item{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; 
-              .ant-select-selector{
-              width: 70px;
-              border-radius: 5px;
-              }          
-            }
-          }
+          
           .form-pw{
             .ant-form-item{
             display: flex;
             flex-direction: column;
             align-items: flex-start; 
             .ant-input-affix-wrapper {
-                width:70px;
-                width:180px;
+                width: 328px;
+                height:45px;
                 border-radius: 5px;
-                margin-right: 20px;
               }          
             }
           }
@@ -134,7 +564,8 @@
             flex-direction: column;
             align-items: flex-start; 
               .ant-input{
-                width:180px;
+                width: 328px;
+                height:45px;
                 border-radius: 5px;
               }          
             }
@@ -146,31 +577,32 @@
             align-items: flex-start; 
               .ant-input{
               border-radius: 5px;
-              width: 380px;
+              width:328px;
+              height:45px;
               }          
             }
           }
-          
-        }
-        .join-and-login{
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          .link-to-login{
-            font-size: 12px;
-            color:#2257F6;
-            margin-right: 20px;
-          }            
-
-          .ant-form-item{
-            margin-bottom: 0;
-            .ant-btn-primary{
-              width:100px;
-              height:40px;
+          .join-and-login{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            .link-to-login{
               font-size: 12px;
-              border-radius: 10px;
-              background: #2257F6;
+              color:#2257F6;
+              margin-right: 20px;
+            }            
+
+            .ant-form-item{
+              margin-bottom: 0;
+              .ant-btn-primary{
+                width:328px;
+                height:45px;
+                font-size: 12px;
+                border-radius: 10px;
+                background: #2257F6;
+              }
             }
           }
         }
@@ -178,6 +610,7 @@
     }
   }
 }
+
 
 .login-container{
   background: #EEF2FF;
