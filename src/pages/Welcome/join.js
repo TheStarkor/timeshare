@@ -254,7 +254,7 @@ const Signup = () => {
                   <div className="link-to-login">로그인</div>
                 </Link> */}
                   <Form.Item>
-                    <Button type="primary" htmlType="submit" id="join">
+                    <Button type="primary" htmlType="submit" className="join">
                       회원가입
                     </Button>
                   </Form.Item>
@@ -397,7 +397,7 @@ const Signup = () => {
                   <div className="link-to-login">로그인</div>
                 </Link> */}
                     <Form.Item>
-                      <Button type="primary" htmlType="submit" id="join">
+                      <Button type="primary" htmlType="submit" className="join">
                         회원가입
                       </Button>
                     </Form.Item>
