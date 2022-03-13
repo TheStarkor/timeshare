@@ -25,6 +25,7 @@
 		}
 		.postList-container{
 			display: flex;
+			align-items: center;
 			// align-self: center;
 			width:1120px;
 			flex-flow: wrap;
@@ -44,7 +45,7 @@
 				align-items: center;
 				justify-content: center; 
 
-				margin: 0 20px 20px 0;
+				margin: 10px;
 			}
 		}
 	}
@@ -74,7 +75,7 @@
 		.postList-container{
 			display: flex;
 			// align-self: center;
-			width:1120px;
+			// width:1120px;
 			flex-flow: wrap;
 			margin-bottom: 80px;
 			.plusCard-container{
@@ -92,28 +93,32 @@
 				align-items: center;
 				justify-content: center; 
 
-				margin: 0 20px 20px 0;
+				margin: 10px;
 			}
 		}
 	}
 }
 
-@include tablet{
+@include mobile{
 	.post-container{
 		display: flex;
 		flex-direction: column;
 		overflow-y: scroll;
 		justify-content: center;
-		padding:50px;
-
-
+		align-items: center;
+		padding:30px 20px;
 		font-family: NanumSquareB;
 		.postList-title-container{
-			padding-right: 20px;
+			width: 340px;
+			padding: 0 20px;
 			margin-bottom: 10px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			.postList-title{
+				font-size: 18px;
+				margin-bottom: 0;
+			}
 			.more{
 				color: #A0A0A0;
 				font-family: NanumSuareR;
@@ -121,14 +126,15 @@
 		}
 		.postList-container{
 			display: flex;
-			width: 100%;
+			width: 340px;
 			flex-flow: wrap;
+			margin-bottom:50px;
 			.plusCard-container{
 				font-family: NanumSquareB;
 				font-size:18px;
 
-				width:260px;
-				height:280px;
+				width:160px;
+				height:160px;
 				border-radius: 15px;
 				border: solid 2px #e5e5e5;
 				background: #F8F8F8;
@@ -138,7 +144,7 @@
 				align-items: center;
 				justify-content: center; 
 
-				margin: 0 20px 20px 0;
+				margin: 5px;
 			}
 		}
 	}

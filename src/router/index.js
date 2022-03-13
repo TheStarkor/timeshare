@@ -43,10 +43,10 @@ const Router = () => {
         <Route exact path="/join" element={<Join />} />
         <Route exact path="/end" element={<End />} />
 
-        {/* <Route exact path="/posts" element={<Post />} />
+        <Route exact path="/posts" element={<Post />} />
         <Route exact path="/post/:id" element={<PostShow />} />
         <Route exact path="/post/new" element={<PostNew />} />
-        <Route exact path="/post/:id/request" element={<PostRequest />} /> */}
+        <Route exact path="/post/:id/request" element={<PostRequest />} />
 
         {/* <Route exact path="/review/:id" element={<Review />} />
         <Route exact path="/review/new" element={<ReviewNew />} /> */}

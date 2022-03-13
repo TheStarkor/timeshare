@@ -1,55 +1,150 @@
-.postCard-container {
-  font-family: NanumSquareB;
-  font-size:18px;
+@import "../../pages/mixins";
 
-  width:260px;
-  height:280px;
-  border-radius: 15px;
-  padding:60px 28px 20px 28px;
-  margin: 0 20px 20px 0;
-  background: white;
-  box-shadow: 0px 0px 16px 2px #00000015; 
+@include desktop{
+  .postCard-container {
+    font-family: NanumSquareB;
+    font-size:18px;
 
-  display: flex; 
-  flex-direction: column;
+    width:260px;
+    height:280px;
+    border-radius: 15px;
+    padding:60px 28px 20px 28px;
+    margin: 10px;
+    background: white;
+    box-shadow: 0px 0px 16px 2px #00000015; 
 
-	cursor: pointer;
-  .tag-container{
-    display: flex;
-    flex-flow: wrap;
-    margin-top: 30px;
-    
+    display: flex; 
+    flex-direction: column;
 
-    .tag-box{
-      color:#2257F6;
-      font-size: 12px;
+    cursor: pointer;
+    .tag-container{
+      display: flex;
+      flex-flow: wrap;
+      margin-top: 30px;
+      
 
-      padding:3px 10px;
-      margin-right: 5px;
-      margin-bottom: 10px;
-      border-radius: 20px;
-      background: white;
-      border: solid 2px #C0CEFF;
+      .tag-box{
+        color:#2257F6;
+        font-size: 12px;
+
+        padding:3px 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: white;
+        border: solid 2px #C0CEFF;
+      }
+      .tag-class{
+        color:#2257F6;
+        font-size: 12px;
+
+        padding:3px 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #E4EBFF;
+        border: solid 2px #C0CEFF;
+      }
+      .tag-price{
+        color:white;
+        font-size: 12px;
+        padding:3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #2257F6;
+        border: solid 2px #2257F6;
+      }
     }
-    .tag-class{
-      color:#2257F6;
-      font-size: 12px;
+  }
+}
 
-      padding:3px 10px;
-      margin-right: 5px;
-      margin-bottom: 10px;
-      border-radius: 20px;
-      background: #E4EBFF;
-      border: solid 2px #C0CEFF;
+@include tablet{
+  .postCard-container {
+    font-family: NanumSquareB;
+    font-size:18px;
+
+    width:260px;
+    height:280px;
+    border-radius: 15px;
+    padding:60px 28px 20px 28px;
+    margin: 10px;
+    background: white;
+    box-shadow: 0px 0px 16px 2px #00000015; 
+
+    display: flex; 
+    flex-direction: column;
+
+    cursor: pointer;
+    .tag-container{
+      display: flex;
+      flex-flow: wrap;
+      margin-top: 30px;
+      
+
+      .tag-box{
+        color:#2257F6;
+        font-size: 12px;
+
+        padding:3px 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: white;
+        border: solid 2px #C0CEFF;
+      }
+      .tag-class{
+        color:#2257F6;
+        font-size: 12px;
+
+        padding:3px 10px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #E4EBFF;
+        border: solid 2px #C0CEFF;
+      }
+      .tag-price{
+        color:white;
+        font-size: 12px;
+        padding:3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #2257F6;
+        border: solid 2px #2257F6;
+      }
     }
-    .tag-price{
-      color:white;
-      font-size: 12px;
-      padding:3px 10px;
-      margin-bottom: 10px;
-      border-radius: 20px;
-      background: #2257F6;
-      border: solid 2px #2257F6;
+  }
+}
+
+@include mobile{
+  .postCard-container {
+    font-family: NanumSquareB;
+    font-size:12px;
+
+    width:160px;
+    height:160px;
+    border-radius: 15px;
+    padding: 30px 15px;
+    margin: 5px;
+    background: white;
+    box-shadow: 0px 0px 16px 2px #00000015; 
+
+    display: flex; 
+    flex-direction: column;
+
+    cursor: pointer;
+    .tag-container{
+      display: flex;
+      flex-flow: wrap;
+      margin-top: 15px;    
+
+      .tag-box{
+        font-family: NanumSquareR;
+        color:#2257F6;
+        margin-right: 5px;
+        margin-top: 5px;
+        background: white;
+      }
     }
   }
 }

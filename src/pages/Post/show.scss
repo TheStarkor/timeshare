@@ -1,115 +1,401 @@
-.showForm-container{
-  display: flex;
-	height:calc(100vh - 85px);
-	padding-bottom: 40px;
-	justify-content: center;
-	align-items: center;
+@import "../../pages/mixins";
 
-	font-family: NanumSquareR;
-	
-	.showForm-box{
-		width:1000px;
-		border-radius: 20px;
-		padding:50px;
-		background: white;
-		box-shadow: 0px 0px 16px 2px #00000008; 
+@include desktop{
+	.showForm-container{
 		display: flex;
-		flex-direction: column;
-		.showForm-title{
-			font-family: NanumSquareEB;
-			font-size: 16px;
-			padding-bottom:20px;
-			margin-bottom: 35px;
-			border-bottom: solid 1px #c4c4c4;
-		}
+		height:calc(100vh - 85px);
+		padding-bottom: 40px;
+		justify-content: center;
+		align-items: center;
+
+		font-family: NanumSquareR;
 		
-		.showForm-top{
+		.showForm-box{
+			width:1000px;
+			border-radius: 20px;
+			padding:50px;
+			background: white;
+			box-shadow: 0px 0px 16px 2px #00000008; 
 			display: flex;
-			color: #5a5a5a;
-			.title-and-detail{
-				width:60%;
-				// height: 100%;
-				// display: flex;
-				// flex-direction: column;
-				// justify-content: space-between;
-				padding-right:20px;
-				border-right: solid 1px #c4c4c4;
-				.showForm-title-container{
-					display: flex;
-					align-items: center;
-					.showForm-title2{
-						font-family: NanumSquareB;
-						font-size: 20px;
+			flex-direction: column;
+			.showForm-title{
+				font-family: NanumSquareEB;
+				font-size: 16px;
+				padding-bottom:20px;
+				margin-bottom: 35px;
+				border-bottom: solid 1px #c4c4c4;
+			}
+			
+			.showForm-top{
+				display: flex;
+				color: #5a5a5a;
+				.title-and-detail{
+					width:60%;
+					// height: 100%;
+					// display: flex;
+					// flex-direction: column;
+					// justify-content: space-between;
+					padding-right:20px;
+					border-right: solid 1px #c4c4c4;
+					.showForm-title-container{
+						display: flex;
+						align-items: center;
+						.showForm-title2{
+							font-family: NanumSquareB;
+							font-size: 20px;
+						}
+						.showForm-status{
+							background: #5FB687;
+							color:white;
+							font-size: 12px;
+							padding:3px 12px;
+							border-radius: 20px;
+							margin-left: 20px;
+						}
 					}
-					.showForm-status{
-						background: #5FB687;
-						color:white;
-						font-size: 12px;
-						padding:3px 12px;
-						border-radius: 20px;
-						margin-left: 20px;
+					.showForm-info{
+						margin: 40px 0;
+						color:#5a5a5a;
+					}
+					.showForm-tag{
+						margin-bottom: 20px;
+					}
+					.showForm-price{
+						color:#2257F6;
+						font-family: NanumSquareB;
+						margin-bottom: 20px;
+						border:solid 2px #2257F6;
+						padding: 8px 20px;
+						border-radius: 8px;
+						width: 150px;
+						text-align: center;
 					}
 				}
-				.showForm-info{
-					margin: 40px 0;
-					color:#5a5a5a;
+				.writer-info{
+					width: 40%;
+					padding-left: 30px;
+					.info-title{
+						font-family: NanumSquareB;
+						font-size: 14px;
+						margin-bottom: 6px;
+					}
+					.info-text{
+						margin-bottom: 16px;
+						margin-left: 10px;
+					}
+					.info-image-container{
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						align-items: center;
+						.info-image{
+							width: 120px;
+							height:120px;
+							background: #f0f0f0;
+							border-radius: 16px;
+						}
+						.info-text{
+							margin-top:10px;
+						}
+					}
+				}
+			}
+			.showForm-button{
+				background:#2257F6;
+				border-radius: 8px;			
+				padding: 8px 0;
+				margin-top: 20px;
+				width: 100px;
+				align-self: flex-end;
+				text-align: center;
+				color:white;
+				a{
+					color: white;
+					font-family: NanumSquareR;
+				}
+			}		
+		}
+	}
+}
+
+@include tablet{
+	.showForm-container{
+		display: flex;
+		height:calc(100vh - 85px);
+		padding-bottom: 40px;
+		justify-content: center;
+		align-items: center;
+
+		font-family: NanumSquareR;
+		.showForm-box{
+			width:1000px;
+			border-radius: 20px;
+			padding:50px;
+			background: white;
+			box-shadow: 0px 0px 16px 2px #00000008; 
+			display: flex;
+			flex-direction: column;
+			.showForm-title{
+				font-family: NanumSquareEB;
+				font-size: 16px;
+				padding-bottom:20px;
+				margin-bottom: 35px;
+				border-bottom: solid 1px #c4c4c4;
+			}
+			
+			.showForm-top{
+				display: flex;
+				color: #5a5a5a;
+				.title-and-detail{
+					width:60%;
+					// height: 100%;
+					// display: flex;
+					// flex-direction: column;
+					// justify-content: space-between;
+					padding-right:20px;
+					border-right: solid 1px #c4c4c4;
+					.showForm-title-container{
+						display: flex;
+						align-items: center;
+						.showForm-title2{
+							font-family: NanumSquareB;
+							font-size: 20px;
+						}
+						.showForm-status{
+							background: #5FB687;
+							color:white;
+							font-size: 12px;
+							padding:3px 12px;
+							border-radius: 20px;
+							margin-left: 20px;
+						}
+					}
+					.showForm-info{
+						margin: 40px 0;
+						color:#5a5a5a;
+					}
+					.showForm-tag{
+						margin-bottom: 20px;
+					}
+					.showForm-price{
+						color:#2257F6;
+						font-family: NanumSquareB;
+						margin-bottom: 20px;
+						border:solid 2px #2257F6;
+						padding: 8px 20px;
+						border-radius: 8px;
+						width: 150px;
+						text-align: center;
+					}
+				}
+				.writer-info{
+					width: 40%;
+					padding-left: 30px;
+					.info-title{
+						font-family: NanumSquareB;
+						font-size: 14px;
+						margin-bottom: 6px;
+					}
+					.info-text{
+						margin-bottom: 16px;
+						margin-left: 10px;
+					}
+					.info-image-container{
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						align-items: center;
+						.info-image{
+							width: 120px;
+							height:120px;
+							background: #f0f0f0;
+							border-radius: 16px;
+						}
+						.info-text{
+							margin-top:10px;
+						}
+					}
+				}
+			}
+			.showForm-button{
+				background:#2257F6;
+				border-radius: 8px;			
+				padding: 8px 0;
+				margin-top: 20px;
+				width: 100px;
+				align-self: flex-end;
+				text-align: center;
+				color:white;
+				a{
+					color: white;
+					font-family: NanumSquareR;
+				}
+			}		
+		}
+	}
+}
+
+@include mobile{
+	.showForm-container{
+		display: flex;
+		width: 100vw;
+		padding-bottom: 40px;
+		justify-content: center;
+		align-items: center;
+
+		font-family: NanumSquareR;
+		color:#5A5A5A;
+		.showForm-box{
+			width: 100vw;
+			// width:1000px;
+			// border-radius: 20px;
+			// padding:50px;
+			// background: white;
+			// box-shadow: 0px 0px 16px 2px #00000008; 
+			// display: flex;
+			// flex-direction: column;
+			.showForm-title{
+				font-family: NanumSquareB;
+        font-size: 16px;				
+        z-index: 1;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height:105px;
+        background: white;
+        border-bottom: solid 1px #f1f1f1;
+			}
+			
+			.showForm-top{
+				display: flex;
+				flex-direction: column;
+				margin-top: 105px;
+
+				.title-and-detail{
+					padding:30px 30px 20px 30px ;
+					border-bottom: solid 1px #f1f1f1;
+					.showForm-title-container{
+						display: flex;
+						align-items: center;
+						
+						.showForm-title2{
+							font-family: NanumSquareB;
+							font-size: 18px;							
+						}
+						.showForm-status{
+							background: #5FB687;
+							color:white;
+							font-size: 12px;
+							padding:3px 12px;
+							border-radius: 20px;
+							margin-left: 20px;
+						}
+					}
+					.showForm-info{
+						margin: 30px 0;
+						font-family: NanumSquareR;
+					}					
+				}
+
+				.writer-info{
+					padding:30px 30px 20px 30px ;
+					border-bottom: solid 1px #f1f1f1;
+					font-size: 12px;
+					.info-title{
+						font-family: NanumSquareB;	
+						margin-right: 12px;					
+					}
+					.info-body{
+						display: flex;
+						margin-top: 12px;
+						.info-image-container{
+							margin-right: 24px;
+							.info-image{
+								width: 72px;
+								height:72px;
+								background: #f0f0f0;
+								border-radius: 10px;
+							}
+						}
+						.info-sentence{
+							display: flex;
+							.info-text{
+								margin-bottom: 8px;
+								margin-right: 12px;
+							}							
+						}
+					}
+				}
+			}
+
+			.showForm-bottom{
+				padding:30px 30px 20px 30px ;
+				.showForm-bottom-title{
+					font-family: NanumSquareB;	
+					font-size: 12px;
+					margin-bottom: 12px;
 				}
 				.showForm-tag{
+					font-family: NanumSquareR;	
+					font-size: 12px;
 					margin-bottom: 20px;
 				}
 				.showForm-price{
-					color:#2257F6;
-					font-family: NanumSquareB;
-					margin-bottom: 20px;
-					border:solid 2px #2257F6;
-					padding: 8px 20px;
-					border-radius: 8px;
-					width: 150px;
+					color:white;
+					font-family: NanumSquareR;
+					
+					background-color: #2257F6;
+					padding: 8px 12px;
+					border-radius: 5px;
+					width: 120px;
 					text-align: center;
 				}
 			}
-			.writer-info{
-				width: 40%;
-				padding-left: 30px;
-				.info-title{
-					font-family: NanumSquareB;
-					font-size: 14px;
-					margin-bottom: 6px;
-				}
-				.info-text{
-					margin-bottom: 16px;
-					margin-left: 10px;
-				}
-				.info-image-container{
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-					align-items: center;
-					.info-image{
-						width: 120px;
-						height:120px;
-						background: #f0f0f0;
-						border-radius: 16px;
-					}
-					.info-text{
-						margin-top:10px;
-					}
-				}
+
+			.ant-input{
+				border-radius: 8px;
+				padding: 8px 12px;
+				margin: 30px 0;
 			}
+
+			.ant-btn-primary{
+				width: 100%;
+				height:54px;
+				border-color: #2257F6;
+				background: #2257F6;
+				border-radius: 8px;
+				padding: 4px 18px;
+			}
+			.ant-btn-secondary{
+				border-width: 0;
+				width: 100%;
+				height: 54px;
+				background: white;
+				border-radius: 8px;
+				color:#2257f6;
+				padding: 4px 18px;
+				box-shadow: 0 0 0 ;
+			}
+
+			.showForm-button{
+				background:#2257F6;
+				border-radius: 8px;			
+				padding: 8px 0;
+				margin-top: 20px;
+				width: 100px;
+				align-self: flex-end;
+				text-align: center;
+				color:white;
+				a{
+					color: white;
+					font-family: NanumSquareR;
+				}
+			}		
 		}
-		.showForm-button{
-			background:#2257F6;
-			border-radius: 8px;			
-			padding: 8px 0;
-			margin-top: 20px;
-			width: 100px;
-			align-self: flex-end;
-			text-align: center;
-			color:white;
-			a{
-				color: white;
-				font-family: NanumSquareR;
-			}
-		}		
 	}
 }
