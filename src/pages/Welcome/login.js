@@ -5,7 +5,7 @@ import { useCookies } from 'react-cookie';
 import { Form, Input, Button, Alert } from 'antd';
 import { Link } from 'react-router-dom';
 
-import "./index.scss";
+import "./login.scss";
 
 const Login = () => {
   const [, setCookie] = useCookies(['Authorization']);
@@ -77,8 +77,12 @@ const Login = () => {
               </div>
             </Form>
           </div>
+          <div className="forget-button">
+            <Link to="/join" className="text">
+              <div> 비밀번호를 잊으셨나요? </div>
+            </Link>
+          </div>
           <div className="signup-button">
-
             <div>타임셰어가 처음이신가요?</div>
             <Link to="/join" className="text">
               <div> 회원가입 </div>

@@ -37,9 +37,9 @@ const Router = () => {
     <Suspense>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        {/* <Route exact path="/me" element={<Mypage />} />
+        <Route exact path="/me" element={<Mypage />} />
 
-        <Route exact path="/login" element={<Login />} /> */}
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/join" element={<Join />} />
         <Route exact path="/end" element={<End />} />
 
