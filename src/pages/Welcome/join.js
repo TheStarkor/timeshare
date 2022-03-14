@@ -61,6 +61,7 @@ const Signup = () => {
         name,
         gender,
         studentId,
+        dept,
         description,
         email,
         password,
@@ -68,12 +69,13 @@ const Signup = () => {
         image,
       } = values;
       const profileImageUrl = image?.file?.response?.uri;
-
+      console.log(values);
       const res = await axios.post("/users/join", {
         nickname,
         name,
         gender,
         studentId,
+        dept,
         description,
         email,
         password,
@@ -185,7 +187,7 @@ const Signup = () => {
                   <div className="form-subject">
                     <Form.Item
                       label="학과"
-                      name="studentId"
+                      name="dept"
                       rules={[{ required: true, message: "학번을 입력해주세요!" }]}
                     >
                       <Input placeholder="전산학부" />
@@ -252,7 +254,7 @@ const Signup = () => {
                   <div className="link-to-login">로그인</div>
                 </Link> */}
                   <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="primary" htmlType="submit" className="join">
                       회원가입
                     </Button>
                   </Form.Item>
@@ -319,7 +321,7 @@ const Signup = () => {
                     <div className="form-subject">
                       <Form.Item
                         label="학과"
-                        name="studentId"
+                        name="dept"
                         rules={[{ required: true, message: "학번을 입력해주세요!" }]}
                       >
                         <Input placeholder="전산학부" />
@@ -395,7 +397,7 @@ const Signup = () => {
                   <div className="link-to-login">로그인</div>
                 </Link> */}
                     <Form.Item>
-                      <Button type="primary" htmlType="submit">
+                      <Button type="primary" htmlType="submit" className="join">
                         회원가입
                       </Button>
                     </Form.Item>

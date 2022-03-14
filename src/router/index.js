@@ -19,6 +19,7 @@ import PostRequest from "../pages/Post/request";
 
 import { GET_ME_REQUEST } from "../reducers/user";
 import End from "../pages/Welcome/end";
+import UserList from "../pages/users";
 
 const Router = () => {
   // const { user } = useSelector(state => state);
@@ -42,6 +43,7 @@ const Router = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/join" element={<Join />} />
         <Route exact path="/end" element={<End />} />
+        <Route exact path="/admin/ours/users" element={<UserList />} />
 
         <Route exact path="/posts" element={<Post />} />
         <Route exact path="/post/:id" element={<PostShow />} />
