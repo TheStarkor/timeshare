@@ -39,8 +39,7 @@ const Home = () => {
 
   return (
     <>
-      <Header />
-      <Landing />
+      {user.data ? <Post /> : <Landing />}
     </>
   )
 }

@@ -13,7 +13,7 @@ const Header = () => {
           </div>
         </Link>
 
-        {/* {user?.data
+        {user?.data
           ? 
           <Link to="/me">
             {user?.data?.name}
@@ -22,7 +22,7 @@ const Header = () => {
           <Link to="/login">
             <div className="header-login"> LOGIN </div>
           </Link>
-        } */}
+        }
         
       </div>
     </>

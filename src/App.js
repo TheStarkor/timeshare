@@ -36,7 +36,7 @@ function App() {
   return (
     <StoreProvider store={store}>
       <BrowserRouter>
-        {/* <Header /> */}
+        <Header />
         <Router />
       </BrowserRouter>
       {/* <Footer /> */}

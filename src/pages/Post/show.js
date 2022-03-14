@@ -23,8 +23,7 @@ const PostShow = () => {
 
   const onFinish = async (values) => {
     try {
-      await axios.post('/posts', values);
-  
+      await axios.post(`/requests/${id}`, values);
       message.success("Submit success!");
 
       navigate('/post')
@@ -158,7 +157,7 @@ const PostShow = () => {
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
               >
-                <Form.Item rules={[{ required: true, message: '내용을 입력해 주세요!' }]}>
+                <Form.Item name="reason" rules={[{ required: true, message: '내용을 입력해 주세요!' }]}>
                   <Input.TextArea placeholder="예) 소요 시간, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요." />
                 </Form.Item>
                 <Form.Item>
