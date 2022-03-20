@@ -77,13 +77,13 @@ const Login = () => {
               </div>
             </Form>
           </div>
-          <div className="forget-button">
+          {/* <div className="forget-button">
             <Link to="/join" className="text">
               <div> 비밀번호를 잊으셨나요? </div>
             </Link>
-          </div>
+          </div> */}
           <div className="signup-button">
-            <div>타임셰어가 처음이신가요?</div>
+            <div>밥한끼가 처음이신가요?</div>
             <Link to="/join" className="text">
               <div> 회원가입 </div>
             </Link>

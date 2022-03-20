@@ -47,7 +47,7 @@ const Router = () => {
 
         <Route exact path="/posts" element={<Post />} />
         <Route exact path="/post/:id" element={<PostShow />} />
-        <Route exact path="/post/new" element={<PostNew />} />
+        <Route exact path="/post/:type/new" element={<PostNew />} />
         <Route exact path="/post/:id/request" element={<PostRequest />} />
 
         {/* <Route exact path="/review/:id" element={<Review />} />

@@ -11,14 +11,37 @@ import Router from "./router";
 import store from "./store";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
 
 function App() {
   const [cookies] = useCookies(["Authorization"]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const resizingHandler = () => {
+    if (window.innerWidth <= 600) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setIsMobile(true);
+      console.log(isMobile)
+    }
+
+    window.addEventListener("resize", resizingHandler);
+    return () => {
+      window.removeEventListener("resize", resizingHandler);
+    };
+  }, []);
+
   FontAwesome();
 
-  axios.defaults.baseURL =
-    "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com/";
-  // axios.defaults.baseURL = "http://localhost:8000";
+  // axios.defaults.baseURL =
+  //   "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com/";
+  axios.defaults.baseURL = "http://localhost:8000";
   axios.interceptors.request.use((config) => {
     // TODO
     // if (process.env.REACT_APP_STAGE === 'dev') {
@@ -36,7 +59,7 @@ function App() {
   return (
     <StoreProvider store={store}>
       <BrowserRouter>
-        <Header />
+        {!isMobile && <Header />}
         <Router />
       </BrowserRouter>
       {/* <Footer /> */}

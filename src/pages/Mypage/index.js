@@ -64,6 +64,30 @@ const Mypage = () => {
     }
   };
 
+  const accept = async (id) => {
+    try {
+      await axios.put(`/requests/${id}`, {
+        status: 1
+      });
+
+      window.location.href = "/me"
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  const reject = async (id) => {
+    try {
+      await axios.put(`/requests/${id}`, {
+        status: 2
+      });
+
+      window.location.href = "/me"
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <>
       <div className="mypage-container">
@@ -106,7 +130,7 @@ const Mypage = () => {
                   <>
                     <div className="request-sentence">
                       <div className="request-bold">{request.reason}</div>
-                      <div className="request-status">{requestStatusParser(request.status)}</div>
+                      <div className={`request-status ${request.status === 2 && "red"}`}>{requestStatusParser(request.status)}</div>
                     </div>
                   </>
                 ))
@@ -122,7 +146,14 @@ const Mypage = () => {
                   <>
                     <div className="request-sentence">
                       <div>{request.reason}</div>
-                      <div className="request-status">{requestStatusParser(request.status)}</div>
+                      
+                      {request.status !== 0 
+                      ? <div className={`request-status ${request.status === 2 && "red"}`}>{requestStatusParser(request.status)}</div>
+                      : 
+                      <div className="request-buttons">
+                        <Button onClick={() => accept(request.id)} type="primary" shape="round" style={{marginRight: "5px"}} ghost className="request-accept">수락</Button>
+                        <Button onClick={() => reject(request.id)} type="danger" shape="round" style={{marginRight: 0}} ghost className="request-reject">거절</Button>
+                      </div>}
                     </div>
                   </>
                 ))
@@ -156,7 +187,10 @@ const Mypage = () => {
               </div>
             </div>
           </div>}
-          {/* <LogoutButton>로그아웃 </LogoutButton> */}
+          <div>
+            <LogoutButton>로그아웃 </LogoutButton>
+          </div>
+          
       </div>
     </>
   )
