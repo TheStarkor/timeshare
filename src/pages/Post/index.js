@@ -72,7 +72,7 @@ const Post = () => {
                     user={post?.User}
                     tag={post?.PostTags.map(item => item.name)}
                     class={post?.User?.dept}
-                    price={post?.price}
+                    price={post?.price === '직접입력' ? `${post?.money} 원` : post?.price}
                   />
                 ))}
               </>
@@ -106,7 +106,7 @@ const Post = () => {
                     user={post?.User}
                     tag={post?.PostTags.map(item => item.name)}
                     class={post?.User?.dept}
-                    price={post?.price}
+                    price={post?.price === '직접입력' ? `${post?.money} 원` : post?.price}
                   />
                 ))}
               </>

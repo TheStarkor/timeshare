@@ -35,6 +35,7 @@ const PostNew = () => {
 
   const onFinish = async (values) => {
     try {
+      console.log(values);
       await axios.post('/posts', {
         ...values,
         type: Number(type)
@@ -89,8 +90,11 @@ const PostNew = () => {
                 <Radio.Button value={'든든한 밥 한 끼'}>든든한 밥 한 끼</Radio.Button>
                 <Radio.Button value={'간단한 샌드위치'}>간단한 샌드위치</Radio.Button>
                 <Radio.Button value={'차 한 잔'}>차 한 잔</Radio.Button>
-                <InputNumber min={0} max={100000} placeholder="직접입력"/>
+                <Radio.Button value={'직접입력'}>직접입력</Radio.Button>
               </Radio.Group>            
+            </Form.Item>
+            <Form.Item name="money">
+              <InputNumber min={0} max={100000} placeholder="직접입력"/>
             </Form.Item>
           </div>
           <Form.Item>

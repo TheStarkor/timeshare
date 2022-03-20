@@ -86,7 +86,7 @@ const PostShow = () => {
                       <div className="showForm-tag">
                         태그: {post.PostTags.map((item) => `#${item.name} `)}
                       </div>
-                      <div className="showForm-price">{`${post?.price}`}</div>
+                      <div className="showForm-price">{post?.price === '직접입력' ? `${post?.money} 원` : post?.price}</div>
                     </div>
                   </>
                 )}
@@ -143,7 +143,7 @@ const PostShow = () => {
                   <div className="showForm-bottom-title">태그</div>
                   {post.PostTags.map((item) => (<div className="showForm-tag">{`#${item.name}`}</div>))}
                   <div className="showForm-bottom-title">가격</div>
-                  <div className="showForm-price">{`${post?.price}`}</div>
+                  <div className="showForm-price">{post?.price === '직접입력' ? `${post?.money} 원` : post?.price}</div>
 
                   <Form
                     form={form}
