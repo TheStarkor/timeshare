@@ -52,7 +52,7 @@ const PostCard = (props) => {
               </>
               : <></>}
             <div className="tag-box">{`#${props?.class}`}</div>
-            {/* <div className="tag-box">{`#${props?.price}`}</div> */}
+            <div className="tag-price">{`#${props?.price}`}</div>
           </>
           :<>
             {props?.tag

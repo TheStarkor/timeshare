@@ -102,16 +102,20 @@ const PostShow = () => {
                           <img className="info-image" src={post?.User?.profileImageUrl} alt="avatar" />
                         </div>
                         <div>
-                          <div className="info-sentence">
+                        <div className="info-sentence">
+                            <div className="info-body-title">이름</div>
                             <div className="info-text">{`${post?.User?.nickname}`}</div>
+                          </div>
+                          <div className="info-sentence">
+                            <div className="info-body-title">성별</div>
                             <div className="info-text">{`${post?.User?.gender}`}</div>
                           </div>
                           <div className="info-sentence">
-                            <div className="info-title">학과</div>
+                            <div className="info-body-title">학과</div>
                             <div className="info-text">{`${post?.User?.studentId}`}</div>
                           </div>
                           <div className="info-sentence">
-                            <div className="info-title">소개</div>
+                            <div className="info-body-title">소개</div>
                             <div className="info-text">{`${post?.User?.description}`}</div>
                           </div>
                         </div>
@@ -137,11 +141,12 @@ const PostShow = () => {
               </div>
             </div>
 
+
             {isMobile ? (
               <>
                 <div className="showForm-bottom">
                   <div className="showForm-bottom-title">태그</div>
-                  {post.PostTags.map((item) => (<div className="showForm-tag">{`#${item.name}`}</div>))}
+                  <div style={{display:"flex"}}>{post.PostTags.map((item) => (<div className="showForm-tag">{`#${item.name} `}</div>))}</div>
                   <div className="showForm-bottom-title">가격</div>
                   <div className="showForm-price">{post?.price === '직접입력' ? `${post?.money} 원` : post?.price}</div>
 
@@ -169,14 +174,35 @@ const PostShow = () => {
                 </div>
               </>
             ) : (
-              <></>
+              <>
+                <div className="showForm-bottom">
+                  <Form
+                    form={form}
+                    layout="vertical"
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                  >
+                    <Form.Item
+                      name="reason"
+                      rules={[
+                        { required: true, message: "내용을 입력해 주세요!" },
+                      ]}
+                    >
+                      <Input.TextArea placeholder="예) 소요 시간, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요." />
+                    </Form.Item>
+                    <Form.Item>
+                      <Button type="secondary" htmlType="submit">
+                        취소
+                      </Button>
+                      <Button type="primary" htmlType="submit">
+                        제출하기
+                      </Button>
+                      {/* <Button type="secondary">Cancel</Button> */}
+                    </Form.Item>
+                  </Form>
+                </div>
+              </>
             )}
-
-            {/* <div className="showForm-button">
-            <Link to={`/post/${post?.id}/request`}>
-              요청하기
-            </Link>
-          </div> */}
           </div>
         </div>
       )}

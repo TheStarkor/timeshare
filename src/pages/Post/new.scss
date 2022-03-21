@@ -89,6 +89,95 @@
 	}
 }
 
+@include tablet{
+	.newForm-container{
+		display: flex;
+		height:calc(100vh - 85px);
+		padding-bottom: 40px;
+		justify-content: center;
+		align-items: center;
+
+		font-family: NanumSquareR;
+		.newForm-box{
+			width:1000px;
+			border-radius: 20px;
+			padding:50px 50px 22px 50px;
+			background: white;
+			box-shadow: 0px 0px 16px 10px #00000008; 
+			.newForm-title{
+				font-family: NanumSquareEB;
+				font-size: 16px;
+				padding-bottom:20px;
+				margin-bottom: 30px;
+				border-bottom: solid 1px #c4c4c4;
+			}
+			.newForm-top{
+				display: flex;
+				.title-and-detail{
+					width:60%;
+					padding-right:20px;
+					border-right: solid 1px #c4c4c4;
+				}
+				.subject-and-tag{
+					width: 40%;
+					padding-left: 20px;
+				}
+			}
+			.ant-input{
+				border-radius: 8px;
+				padding: 8px 12px;
+			}
+			.ant-radio-button-wrapper{
+				color:#696969;
+				border-left-width: 1px;
+				margin:0 6px;
+				border-radius: 8px;
+				height:40px;
+				padding: 5px 15px;
+			}
+			.ant-radio-button-wrapper-checked{
+				background: #2257F6;
+				color:white;
+				border-color: #2257F6;
+			}
+			.ant-radio-button-wrapper:not(:first-child)::before{
+				width:0;
+			}
+			.ant-input-number{
+				height: 38px;
+				width:120px;
+				border-radius: 8px;
+				margin: 0 6px;
+				text-align: center;
+				.ant-input-number-input{
+					height:40px;
+				}
+			}
+			.button-container{
+				margin-top: 10px;
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				.ant-btn-primary{
+					border-color: #2257F6;
+					background: #2257F6;
+					border-radius: 8px;
+					margin-left: 13px;
+					padding: 4px 18px;
+				}
+				.ant-btn-secondary{
+					border-color: #2257F6;
+					background: white;
+					border-radius: 8px;
+					color:#2257f6;
+					padding: 4px 18px;
+				}
+			}
+
+		}
+	}
+}
+
 @include mobile{
 	.newForm-container{
 		display: flex;
@@ -141,6 +230,7 @@
 				border-radius: 8px;
 				padding: 8px 12px;
 			}
+			
 			.ant-radio-button-wrapper{
 				color:#696969;
 				border-left-width: 1px;
@@ -158,7 +248,7 @@
 				width:0;
 			}
 			.ant-input-number{
-				height: 38px;
+				height: 40px;
 				width:120px;
 				border-radius: 8px;
 				margin:0 12px 12px 0;

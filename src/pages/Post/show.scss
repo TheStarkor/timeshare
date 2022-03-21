@@ -46,6 +46,9 @@
 						}
 						.showForm-status{
 							background: #5FB687;
+							width:70px;
+							display: flex;
+							justify-content: center;
 							color:white;
 							font-size: 12px;
 							padding:3px 12px;
@@ -93,11 +96,66 @@
 							height:120px;
 							background: #f0f0f0;
 							border-radius: 16px;
+							object-fit: cover;
 						}
 						.info-text{
 							margin-top:10px;
 						}
 					}
+				}
+			}
+
+			.showForm-bottom{
+				
+				.showForm-bottom-title{
+					font-family: NanumSquareB;	
+					font-size: 12px;
+					margin-bottom: 12px;
+				}
+				.showForm-tag{
+					font-family: NanumSquareR;	
+					font-size: 12px;
+					margin-bottom: 20px;
+				}
+				.showForm-price{
+					color:white;
+					font-family: NanumSquareR;
+					
+					background-color: #2257F6;
+					padding: 8px 12px;
+					border-radius: 5px;
+					width: 120px;
+					text-align: center;
+				}
+			}
+
+			.ant-input{
+				width: 100%;
+				border-radius: 8px;
+				padding: 8px 12px;
+				margin-top: 30px ;
+			}
+			.ant-form-item-control-input-content{
+				display: flex;
+				justify-content: end;
+				.ant-btn-primary{
+					width: 100px;
+					height:48px;
+					border-color: #2257F6;
+					background: #2257F6;
+					border-radius: 8px;
+					padding: 4px 18px;
+				}
+				.ant-btn-secondary{
+					width: 100px;
+					height:48px;
+					background: white;
+					border-radius: 8px;
+					border:solid 1px #2257f6;
+					color:#2257f6;
+					padding: 4px 18px;
+					box-shadow: 0 0 0 ;
+					margin-right: 10px;
 				}
 			}
 			.showForm-button{
@@ -163,9 +221,12 @@
 						}
 						.showForm-status{
 							background: #5FB687;
+							width:70px;
+							display: flex;
+							justify-content: center;
 							color:white;
 							font-size: 12px;
-							padding:3px 12px;
+							padding:3px 0;
 							border-radius: 20px;
 							margin-left: 20px;
 						}
@@ -210,11 +271,64 @@
 							height:120px;
 							background: #f0f0f0;
 							border-radius: 16px;
+							object-fit: cover;
 						}
 						.info-text{
 							margin-top:10px;
 						}
 					}
+				}
+			}
+			.showForm-bottom{
+				
+				.showForm-bottom-title{
+					font-family: NanumSquareB;	
+					font-size: 12px;
+					margin-bottom: 12px;
+				}
+				.showForm-tag{
+					font-family: NanumSquareR;	
+					font-size: 12px;
+					margin-bottom: 20px;
+				}
+				.showForm-price{
+					color:white;
+					font-family: NanumSquareR;
+					
+					background-color: #2257F6;
+					padding: 8px 12px;
+					border-radius: 5px;
+					width: 120px;
+					text-align: center;
+				}
+			}
+			.ant-input{
+				width: 100%;
+				border-radius: 8px;
+				padding: 8px 12px;
+				margin-top: 30px ;
+			}
+			.ant-form-item-control-input-content{
+				display: flex;
+				justify-content: end;
+				.ant-btn-primary{
+					width: 100px;
+					height:48px;
+					border-color: #2257F6;
+					background: #2257F6;
+					border-radius: 8px;
+					padding: 4px 18px;
+				}
+				.ant-btn-secondary{
+					width: 100px;
+					height:48px;
+					background: white;
+					border-radius: 8px;
+					border:solid 1px #2257f6;
+					color:#2257f6;
+					padding: 4px 18px;
+					box-shadow: 0 0 0 ;
+					margin-right: 10px;
 				}
 			}
 			.showForm-button{
@@ -256,19 +370,19 @@
 			// flex-direction: column;
 			.showForm-title{
 				font-family: NanumSquareB;
-        font-size: 16px;				
-        z-index: 1;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        width: 100%;
-        height:105px;
-        background: white;
-        border-bottom: solid 1px #f1f1f1;
+				font-size: 16px;				
+				z-index: 1;
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-end;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				width: 100%;
+				height:105px;
+				background: white;
+				border-bottom: solid 1px #f1f1f1;
 			}
 			
 			.showForm-top{
@@ -277,11 +391,11 @@
 				margin-top: 105px;
 
 				.title-and-detail{
-					padding:30px 30px 20px 30px ;
+					padding:30px 30px 30px 30px ;
 					border-bottom: solid 1px #f1f1f1;
 					.showForm-title-container{
 						display: flex;
-						align-items: center;
+						align-items: flex-start;
 						
 						.showForm-title2{
 							font-family: NanumSquareB;
@@ -289,11 +403,14 @@
 						}
 						.showForm-status{
 							background: #5FB687;
+							width:70px;
+							display: flex;
+							justify-content: center;
 							color:white;
 							font-size: 12px;
 							padding:3px 12px;
 							border-radius: 20px;
-							margin-left: 20px;
+							margin-left: 16px;
 						}
 					}
 					.showForm-info{
@@ -308,7 +425,13 @@
 					font-size: 12px;
 					.info-title{
 						font-family: NanumSquareB;	
-						margin-right: 12px;					
+						margin-right: 12px;	
+						display: flex;	
+					}
+					.info-body-title{
+						font-family: NanumSquareB;	
+						margin-right: 12px;	
+						width: 30px;	
 					}
 					.info-body{
 						display: flex;
@@ -320,6 +443,7 @@
 								height:72px;
 								background: #f0f0f0;
 								border-radius: 10px;
+								object-fit: cover;
 							}
 						}
 						.info-sentence{
@@ -344,6 +468,7 @@
 					font-family: NanumSquareR;	
 					font-size: 12px;
 					margin-bottom: 20px;
+					margin-right: 10px;
 				}
 				.showForm-price{
 					color:white;

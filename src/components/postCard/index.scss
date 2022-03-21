@@ -8,19 +8,20 @@
     width:260px;
     height:280px;
     border-radius: 15px;
-    padding:60px 28px 20px 28px;
+    padding:0 28px;
     margin: 10px;
     background: white;
     box-shadow: 0px 0px 16px 2px #00000015; 
 
     display: flex; 
     flex-direction: column;
+    justify-content: center;
 
     cursor: pointer;
     .tag-container{
       display: flex;
       flex-flow: wrap;
-      margin-top: 30px;
+      margin-top: 20px;
       
 
       .tag-box{
@@ -29,7 +30,7 @@
 
         padding:3px 10px;
         margin-right: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 20px;
         background: white;
         border: solid 2px #C0CEFF;
@@ -40,7 +41,7 @@
 
         padding:3px 10px;
         margin-right: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 20px;
         background: #E4EBFF;
         border: solid 2px #C0CEFF;
@@ -49,7 +50,7 @@
         color:white;
         font-size: 12px;
         padding:3px 10px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 20px;
         background: #2257F6;
         border: solid 2px #2257F6;
@@ -66,19 +67,20 @@
     width:260px;
     height:280px;
     border-radius: 15px;
-    padding:60px 28px 20px 28px;
+    padding:0 28px;
     margin: 10px;
     background: white;
     box-shadow: 0px 0px 16px 2px #00000015; 
 
     display: flex; 
     flex-direction: column;
+    justify-content: center;
 
     cursor: pointer;
     .tag-container{
       display: flex;
       flex-flow: wrap;
-      margin-top: 30px;
+      margin-top: 20px;
       
 
       .tag-box{
@@ -87,7 +89,7 @@
 
         padding:3px 10px;
         margin-right: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 20px;
         background: white;
         border: solid 2px #C0CEFF;
@@ -98,7 +100,7 @@
 
         padding:3px 10px;
         margin-right: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 20px;
         background: #E4EBFF;
         border: solid 2px #C0CEFF;
@@ -107,7 +109,7 @@
         color:white;
         font-size: 12px;
         padding:3px 10px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 20px;
         background: #2257F6;
         border: solid 2px #2257F6;
@@ -122,15 +124,16 @@
     font-size:12px;
 
     width:160px;
-    height:160px;
+    height:230px;
     border-radius: 15px;
-    padding: 30px 15px;
+    padding: 0 15px;
     margin: 5px;
     background: white;
     box-shadow: 0px 0px 16px 2px #00000015; 
 
     display: flex; 
     flex-direction: column;
+    justify-content: center;
 
     cursor: pointer;
     .tag-container{
@@ -138,12 +141,35 @@
       flex-flow: wrap;
       margin-top: 15px;    
 
+      // .tag-box{
+      //   font-family: NanumSquareR;
+      //   color:#2257F6;
+      //   margin-right: 5px;
+      //   margin-top: 5px;
+      //   background: white;
+      // }
+
       .tag-box{
-        font-family: NanumSquareR;
+        height: 22px;
         color:#2257F6;
-        margin-right: 5px;
+        font-size: 10px;
         margin-top: 5px;
+        padding:2px 5px;
+        margin-right: 5px;
+        border-radius: 10px;
         background: white;
+        border: solid 1px #C0CEFF;
+      }
+      .tag-price{
+        height: 22px;
+        color:white;
+        font-size: 10px;
+        margin-top: 5px;
+        padding:2px 5px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #2257F6;
+        border: solid 2px #2257F6;
       }
     }
   }

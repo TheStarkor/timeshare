@@ -145,7 +145,7 @@ const Mypage = () => {
                 user.data.Requests.map(request => (
                   <>
                     <div className="request-sentence">
-                      <div>{request.reason}</div>
+                      <div className="request-bold">{request.reason}</div>
                       
                       {request.status !== 0 
                       ? <div className={`request-status ${request.status === 2 && "red"}`}>{requestStatusParser(request.status)}</div>

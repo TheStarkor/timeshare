@@ -16,7 +16,8 @@ const Header = () => {
         {user?.data
           ? 
           <Link to="/me">
-            {user?.data?.name}
+            {/* {user?.data?.name} */}
+            <img className="header-profile-image" src={user?.data.profileImageUrl} alt="avatar" />
           </Link>
           :
           <Link to="/login">
