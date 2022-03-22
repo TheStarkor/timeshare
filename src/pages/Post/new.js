@@ -36,15 +36,14 @@ const PostNew = () => {
 
   const onFinish = async (values) => {
     try {
-      console.log(values);
-      // await axios.post('/posts', {
-      //   ...values,
-      //   type: Number(type)
-      // });
+      await axios.post('/posts', {
+        ...values,
+        type: Number(type)
+      });
   
-      // message.success("Submit success!");
+      message.success("Submit success!");
 
-      // navigate('/post')
+      navigate('/post')
     } catch (error) {
       console.log(error);
       onFinishFailed();
