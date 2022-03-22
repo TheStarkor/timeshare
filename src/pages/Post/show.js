@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Form, Input, message, Button } from "antd";
 
-import { statusParser } from "../../utils/parser";
+import { genderParser, statusParser } from "../../utils/parser";
 import "./show.scss";
 
 const PostShow = () => {
@@ -24,7 +24,7 @@ const PostShow = () => {
   const onFinish = async (values) => {
     try {
       await axios.post(`/requests/${id}`, values);
-      message.success("Submit success!");
+      message.success("요청이 완료되었습니다! 마이페이지에서 확인해보세요!");
 
       navigate("/post");
     } catch (error) {
@@ -103,16 +103,16 @@ const PostShow = () => {
                         </div>
                         <div>
                         <div className="info-sentence">
-                            <div className="info-body-title">이름</div>
-                            <div className="info-text">{`${post?.User?.nickname}`}</div>
+                            <div className="info-name-title">{`${post?.User?.name}`}</div>
+                            <div className="info-text">{`${genderParser(post?.User?.gender)}`}</div>
                           </div>
                           <div className="info-sentence">
-                            <div className="info-body-title">성별</div>
-                            <div className="info-text">{`${post?.User?.gender}`}</div>
+                            <div className="info-body-title">학과/학번</div>
+                            <div className="info-text">{`${post?.User?.dept}/${post?.User?.studentId}`}</div>
                           </div>
                           <div className="info-sentence">
-                            <div className="info-body-title">학과</div>
-                            <div className="info-text">{`${post?.User?.studentId}`}</div>
+                            <div className="info-body-title">현재 소속</div>
+                            <div className="info-text">{`${post?.belong}`}</div>
                           </div>
                           <div className="info-sentence">
                             <div className="info-body-title">소개</div>
@@ -126,13 +126,13 @@ const PostShow = () => {
                       <div className="info-image-container">
                         <img className="info-image" src={post?.User?.profileImageUrl} alt="avatar" />
                         <div className="info-text">
-                          {`${post?.User?.name}`}
+                          {`${post?.User?.name}`} ({`${genderParser(post?.User?.gender)}`})
                         </div>
                       </div>
-                      <div className="info-title">성별</div>
-                      <div className="info-text">{`${post?.User?.gender}`}</div>
-                      <div className="info-title">학번</div>
-                      <div className="info-text">{`${post?.User?.studentId}`}</div>
+                      <div className="info-title">학과/학번</div>
+                      <div className="info-text">{`${post?.User?.dept}/${post?.User.studentId}`}</div>
+                      <div className="info-title">현재 소속</div>
+                      <div className="info-text">{`${post?.belong}`}</div>
                       <div className="info-title">소개</div>
                       <div className="info-text">{`${post?.User?.description}`}</div>
                     </>
@@ -162,11 +162,11 @@ const PostShow = () => {
                         { required: true, message: "내용을 입력해 주세요!" },
                       ]}
                     >
-                      <Input.TextArea placeholder="예) 소요 시간, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요." />
+                      <Input.TextArea placeholder="본인 소개 및 이야기 하고 싶은 내용, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요!" />
                     </Form.Item>
                     <Form.Item>
                       <Button type="primary" htmlType="submit">
-                        제출하기
+                        전달하기
                       </Button>
                       {/* <Button type="secondary">Cancel</Button> */}
                     </Form.Item>
@@ -188,14 +188,14 @@ const PostShow = () => {
                         { required: true, message: "내용을 입력해 주세요!" },
                       ]}
                     >
-                      <Input.TextArea placeholder="예) 소요 시간, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요." />
+                      <Input.TextArea placeholder="본인 소개 및 이야기 하고 싶은 내용, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요!" />
                     </Form.Item>
                     <Form.Item>
                       <Button type="secondary" htmlType="submit">
                         취소
                       </Button>
                       <Button type="primary" htmlType="submit">
-                        제출하기
+                        전달하기
                       </Button>
                       {/* <Button type="secondary">Cancel</Button> */}
                     </Form.Item>

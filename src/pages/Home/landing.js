@@ -43,8 +43,8 @@ const Landing = () => {
               직접 만나 대화를 하고 싶은 선배와 밥 한끼 함께 해요!
             </div>
 
-            <Link to="/join">
-              <div className='preopen'>런칭 전 사전가입 하러가기</div>
+            <Link to="/login">
+              <div className='preopen'>시작하기</div>
             </Link>
           </div>
         </div>

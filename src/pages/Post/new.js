@@ -10,6 +10,7 @@ const PostNew = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const [isMobile, setisMobile] = useState(false);
+  const [etc, setEtc] = useState(false);
 
   const resizingHandler = () => {
     if (window.innerWidth <= 600) {
@@ -36,14 +37,14 @@ const PostNew = () => {
   const onFinish = async (values) => {
     try {
       console.log(values);
-      await axios.post('/posts', {
-        ...values,
-        type: Number(type)
-      });
+      // await axios.post('/posts', {
+      //   ...values,
+      //   type: Number(type)
+      // });
   
-      message.success("Submit success!");
+      // message.success("Submit success!");
 
-      navigate('/post')
+      // navigate('/post')
     } catch (error) {
       console.log(error);
       onFinishFailed();
@@ -75,8 +76,8 @@ const PostNew = () => {
             </div>
 
             <div className="subject-and-tag">
-              <Form.Item label="학과" name="subject" rules={[{ required: true, message: '학과를 입력해 주세요!' }]}>
-                <Input placeholder="예) 공과대학 전산학부 석사 졸업" />
+              <Form.Item label="현재 소속" name="belong" rules={[{ required: true, message: '현재 소속을 입력해 주세요!' }]}>
+                <Input placeholder="예) 삼성전자 UX 디자이너" />
               </Form.Item>
               <Form.Item label="태그 편집" name="tags" rules={[{ required: true, message: '내용을 입력해 주세요!' }]}>
                 <Input.TextArea rows={isMobile ? 3 : 8} placeholder="#태그 입력 (최대 5개)" />
@@ -86,17 +87,21 @@ const PostNew = () => {
           <div className="newform-price">
             <Form.Item label="가격" name="price" rules={[{ required: true, message: '종류를 선택해 주세요!' }]}>
               <Radio.Group>
-                <Radio.Button value={'커피 한 잔'}>커피 한 잔</Radio.Button>
-                <Radio.Button value={'든든한 밥 한 끼'}>든든한 밥 한 끼</Radio.Button>
-                <Radio.Button value={'간단한 샌드위치'}>간단한 샌드위치</Radio.Button>
-                <Radio.Button value={'차 한 잔'}>차 한 잔</Radio.Button>
-                <Radio.Button value={'직접입력'}>직접입력</Radio.Button>
+                <Radio.Button onClick={() => setEtc(false)} value={'커피 한 잔'}>커피 한 잔</Radio.Button>
+                <Radio.Button onClick={() => setEtc(false)} value={'든든한 밥 한 끼'}>든든한 밥 한 끼</Radio.Button>
+                <Radio.Button onClick={() => setEtc(false)} value={'간단한 샌드위치'}>간단한 샌드위치</Radio.Button>
+                <Radio.Button onClick={() => setEtc(false)} value={'차 한 잔'}>차 한 잔</Radio.Button>
+                <Radio.Button onChange={(value) => setEtc(value.target.checked)} value={'직접입력'}>직접입력</Radio.Button>
               </Radio.Group>            
             </Form.Item>
-            <Form.Item name="money">
-              <InputNumber min={0} max={100000} placeholder="직접입력"/>
-            </Form.Item>
+
+            {etc &&
+              <Form.Item label="금액" name="money" rules={[{ required: true, message: '금액을 입력해 주세요!' }]}>
+                <InputNumber min={0} max={100000} placeholder="직접입력"/>
+              </Form.Item>
+            }
           </div>
+
           <Form.Item>
             {isMobile? <>
               <div className="button-container">

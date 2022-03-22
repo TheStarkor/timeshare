@@ -18,7 +18,7 @@ const LogoutButton = () => {
 
   return (
     <>
-      <div style={{color:"#777777", cursor:"pointer", marginTop:"80px"}}>로그아웃</div>
+      <div onClick={Logout} style={{color:"#777777", cursor:"pointer", marginTop:"80px"}}>로그아웃</div>
     </>
   );
 };

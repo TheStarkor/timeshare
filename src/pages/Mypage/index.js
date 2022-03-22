@@ -17,6 +17,7 @@ const Mypage = () => {
   const [isError, setError] = useState(false);
   const dispatch = useDispatch();
   const [isMobile, setisMobile] = useState(false);
+  const [received, setReceived] = useState([]);
 
   const resizingHandler = () => {
     if (window.innerWidth <= 600) {
@@ -27,6 +28,11 @@ const Mypage = () => {
   };
   // 우선 맨 처음 1023이하면 모바일 처리
   useEffect(() => {
+    axios.get('/requests')
+      .then(res => {
+        setReceived(res.data);
+      })
+
     if (window.innerWidth <= 600) {
       setisMobile(true);
       console.log(isMobile)
@@ -130,7 +136,7 @@ const Mypage = () => {
                   <>
                     <div className="request-sentence">
                       <div className="request-bold">{request.reason}</div>
-                      <div className={`request-status ${request.status === 2 && "red"}`}>{requestStatusParser(request.status)}</div>
+                      <div className={`request-status ${request.status === 0 ? "green" : request.status === 2 && "red"}`}>{requestStatusParser(request.status)}</div>
                     </div>
                   </>
                 ))
@@ -140,9 +146,9 @@ const Mypage = () => {
 
             <div className="mypage-request-container">
               <div className="mypage-title">들어온 요청</div>
-              {user.data.Requests.length !== 0
+              {received.length !== 0
                 ?
-                user.data.Requests.map(request => (
+                received.map(request => (
                   <>
                     <div className="request-sentence">
                       <div className="request-bold">{request.reason}</div>

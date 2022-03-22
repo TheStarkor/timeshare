@@ -51,7 +51,7 @@ const Post = () => {
         <div>
           <div class="postList-title-container">
             <h2 className="postList-title">시간을 공유해요</h2>
-            <div className="more">더보기</div>
+            {/* <div className="more">더보기</div> */}
           </div>
           <div className="postList-container">
             <Link to="/post/1/new">
@@ -85,7 +85,7 @@ const Post = () => {
         <div>
           <div class="postList-title-container">
             <h2 className="postList-title">시간을 공유받고 싶어요</h2>
-            <div className="more">더보기</div>
+            {/* <div className="more">더보기</div> */}
           </div>
           <div className="postList-container">
             <Link to="/post/2/new">

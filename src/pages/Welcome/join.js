@@ -217,7 +217,7 @@ const Signup = () => {
                 </div>
                 <div className="form-phone">
                   <Form.Item
-                    label="phoneNumber"
+                    label="전화번호"
                     name="phoneNumber"
                     rules={[{ required: true, message: "폰 번호를 입력해주세요!" }]}
                   >

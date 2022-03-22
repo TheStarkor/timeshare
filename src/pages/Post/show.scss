@@ -428,10 +428,22 @@
 						margin-right: 12px;	
 						display: flex;	
 					}
+
+					.info-name-title{
+						font-family: NanumSquareR;	
+						margin-right: 8px;	
+						width: 50px;	
+						margin-bottom: 15px;
+					}
 					.info-body-title{
 						font-family: NanumSquareB;	
 						margin-right: 12px;	
-						width: 30px;	
+						width: 50px;	
+					}
+					.info-belong-title{
+						font-family: NanumSquareB;	
+						margin-right: 12px;	
+						width: 50px;	
 					}
 					.info-body{
 						display: flex;
