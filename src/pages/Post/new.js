@@ -79,7 +79,7 @@ const PostNew = () => {
                 <Input placeholder="예) 삼성전자 UX 디자이너" />
               </Form.Item>
               <Form.Item label="태그 편집" name="tags" rules={[{ required: true, message: '내용을 입력해 주세요!' }]}>
-                <Input.TextArea rows={isMobile ? 3 : 8} placeholder="#태그 입력 (최대 5개)" />
+                <Input.TextArea rows={isMobile ? 3 : 8} placeholder="#태그 입력 (최대 5개) 예) #스타트업 #개발자 #디자인" />
               </Form.Item>
             </div>
           </div>
