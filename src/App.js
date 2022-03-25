@@ -40,7 +40,7 @@ function App() {
   FontAwesome();
 
   axios.defaults.baseURL =
-    "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com/";
+    "https://api.onebob.co/";
   // axios.defaults.baseURL = "http://localhost:8000";
   axios.interceptors.request.use((config) => {
     // TODO

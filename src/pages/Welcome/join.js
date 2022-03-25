@@ -135,7 +135,7 @@ const Signup = () => {
                     className="avatar-uploader"
                     showUploadList={false}
                     action={
-                      "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com/uploads"
+                      "https://api.onebob.co/uploads"
                     }
                     onChange={handleChange}
                   >
@@ -275,7 +275,7 @@ const Signup = () => {
                       className="avatar-uploader"
                       showUploadList={false}
                       action={
-                        "http://ec2-13-125-111-9.ap-northeast-2.compute.amazonaws.com/uploads"
+                        "https://api.onebob.co/uploads"
                       }
                       onChange={handleChange}
                     >
