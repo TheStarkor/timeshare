@@ -182,9 +182,9 @@ const Mypage = () => {
                         title={post?.title}
                         content={post?.content}
                         user={post?.User}
-                        tag={post?.tag}
-                        class={post?.class}
-                        price={post?.price}
+                        tag={post?.PostTags?.map(item => item.name)}
+                        class={post?.User?.dept}
+                        price={post?.price === '직접입력' ? `${post?.money} 원` : post?.price}
                       />
                     </>
                   ))
