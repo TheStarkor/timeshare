@@ -114,7 +114,7 @@ const Mypage = () => {
                   <div className="mypage-profile-sentence">
                     <div className="mypage-profile-bold">
                       <div>학과</div>
-                      <div>자기소개</div>
+                      <div style={{width: '55px'}}>자기소개</div>
                       <div>연락처</div>
                     </div>
                     <div className="mypage-profile-content">
