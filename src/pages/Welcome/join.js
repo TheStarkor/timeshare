@@ -89,7 +89,7 @@ const Signup = () => {
         path: "/",
         maxAge: 24 * 60 * 60,
       });
-      window.location.href = "/end";
+      window.location.href = "/";
     } catch (error) {
       setError(true);
     }

@@ -110,7 +110,7 @@ const Mypage = () => {
                 <img className="image" src={user?.data.profileImageUrl} alt="avatar" />
 
                 <div>
-                  <div className="mypage-profile-name">이름이름</div>
+                  <div className="mypage-profile-name">{user?.data?.name}</div>
                   <div className="mypage-profile-sentence">
                     <div className="mypage-profile-bold">
                       <div>학과</div>
