@@ -332,7 +332,7 @@ const Signup = () => {
                   <div className="form-container">
                     <div className="form-email">
                       <Form.Item
-                        label="Email"
+                        label="이메일"
                         name="email"
                         rules={[{ required: true, message: "이메일을 입력해주세요!" }]}
                       >
@@ -341,7 +341,7 @@ const Signup = () => {
                       </Form.Item>
                     </div>
                     <div className="form-gender">
-                      <Form.Item name="gender" label="Gender" rules={[{ required: true, message: "성별을 선택해주세요!" }]}>
+                      <Form.Item name="성별" label="Gender" rules={[{ required: true, message: "성별을 선택해주세요!" }]}>
                         <Select
                           placeholder="성별"
                           onChange={onGenderChange}
