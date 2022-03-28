@@ -341,7 +341,7 @@ const Signup = () => {
                       </Form.Item>
                     </div>
                     <div className="form-gender">
-                      <Form.Item name="성별" label="Gender" rules={[{ required: true, message: "성별을 선택해주세요!" }]}>
+                      <Form.Item name="gender" label="성별" rules={[{ required: true, message: "성별을 선택해주세요!" }]}>
                         <Select
                           placeholder="성별"
                           onChange={onGenderChange}
