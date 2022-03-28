@@ -358,7 +358,7 @@ const Signup = () => {
                   <div className="form-container">
                     <div className="form-pw">
                       <Form.Item
-                        label="Password"
+                        label="비밀번호"
                         name="password"
                         rules={[{ required: true, message: "비밀번호를 입력해주세요!" }]}
                       >
@@ -369,7 +369,7 @@ const Signup = () => {
 
                     <div className="form-phone">
                       <Form.Item
-                        label="phoneNumber"
+                        label="전화번호"
                         name="phoneNumber"
                         rules={[{ required: true, message: "폰 번호를 입력해주세요!" }]}
                       >

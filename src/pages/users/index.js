@@ -26,7 +26,7 @@ const columns = [
   },
   {
     title: '전화번호',
-    dataIndex: 'phoneNumber',
+    dataIndex: 'honeNumber',
   },
   {
     title: '소개',
