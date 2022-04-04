@@ -62,7 +62,6 @@ function App() {
         {!isMobile && <Header />}
         <Router />
       </BrowserRouter>
-      {/* <Footer /> */}
     </StoreProvider>
   );
 }

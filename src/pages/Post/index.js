@@ -6,6 +6,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import "./index.scss";
 import PostCard from "../../components/postCard/postCard";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const Post = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -116,6 +117,7 @@ const Post = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

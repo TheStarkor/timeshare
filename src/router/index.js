@@ -34,7 +34,7 @@ const Router = () => {
     }
   }, [cookies, dispatch]);
 
-  return(
+  return (
     <Suspense>
       <Routes>
         <Route exact path="/" element={<Home />} />
