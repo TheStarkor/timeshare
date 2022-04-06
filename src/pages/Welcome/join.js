@@ -103,6 +103,13 @@ const Signup = () => {
     }
   };
 
+  const clickJoin = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'join'
+    })
+  }
+
   return (
     <>
       <div className="signup-container">
@@ -254,7 +261,7 @@ const Signup = () => {
                   <div className="link-to-login">로그인</div>
                 </Link> */}
                   <Form.Item>
-                    <Button type="primary" htmlType="submit" className="join">
+                    <Button type="primary" htmlType="submit" className="join" onClick={clickJoin}>
                       회원가입
                     </Button>
                   </Form.Item>
@@ -397,7 +404,7 @@ const Signup = () => {
                   <div className="link-to-login">로그인</div>
                 </Link> */}
                     <Form.Item>
-                      <Button type="primary" htmlType="submit" className="join">
+                      <Button type="primary" htmlType="submit" className="join" onClick={clickJoin}>
                         회원가입
                       </Button>
                     </Form.Item>

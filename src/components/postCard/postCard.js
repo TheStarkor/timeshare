@@ -32,7 +32,18 @@ const PostCard = (props) => {
     };
   }, []);
 
+  const clickPost = (post) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'click_post',
+      post_id: post.id,
+      post_title: post.title
+    })
+  }
+
   const clickCard = () => {
+    clickPost(props);
+
     navigate(`/post/${props?.id}`);
   };
 

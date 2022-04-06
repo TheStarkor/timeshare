@@ -59,6 +59,16 @@ const PostShow = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const clickRequest = (post) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'request',
+      post_id: post.id,
+      post_title: post.title,
+      post_price: post.price
+    })
+  }
+
   return (
     <>
       {post && (
@@ -165,7 +175,7 @@ const PostShow = () => {
                       <Input.TextArea placeholder="본인 소개 및 이야기 하고 싶은 내용, 가능한 시간, 가능한 대략적인 위치는 꼭 명시해주세요!" />
                     </Form.Item>
                     <Form.Item>
-                      <Button type="primary" htmlType="submit">
+                      <Button type="primary" htmlType="submit" onClick={() => {clickRequest(post)}}>
                         전달하기
                       </Button>
                       {/* <Button type="secondary">Cancel</Button> */}
@@ -194,7 +204,7 @@ const PostShow = () => {
                       <Button type="secondary" htmlType="submit">
                         취소
                       </Button>
-                      <Button type="primary" htmlType="submit">
+                      <Button type="primary" htmlType="submit" onClick={() => {clickRequest(post)}}>
                         전달하기
                       </Button>
                       {/* <Button type="secondary">Cancel</Button> */}

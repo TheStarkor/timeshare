@@ -28,6 +28,13 @@ const Landing = () => {
     };
   }, []);
 
+  const clickStart = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'start'
+    })
+  }
+
   return (
     <>
       <div className="container">
@@ -43,7 +50,7 @@ const Landing = () => {
               직접 만나 대화를 하고 싶은 선배와 밥 한끼 함께 해요!
             </div>
 
-            <Link to="/login">
+            <Link to="/login" onClick={clickStart}>
               <div className='preopen'>시작하기</div>
             </Link>
           </div>

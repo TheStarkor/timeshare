@@ -15,14 +15,12 @@ const Login = () => {
   const onFinish = async (values) => {
     const { email, password } = values;
     setLogging(true);
+    clickLogin();
     try {
       const res = await axios.post('/users/login', {
         email,
         password,
       })
-
-      console.log(res.data);
-
       setCookie('Authorization', res.data.token, { path: '/', maxAge: 24 * 60 * 60 });
       window.location.href = "/"
     } catch (error) {
@@ -30,6 +28,20 @@ const Login = () => {
       setLogging(false);
       setError(true);
     }
+  }
+
+  const clickLogin = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'login'
+    })
+  }
+
+  const clickMoveJoin = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'move_to_join'
+    })
   }
 
   return (
@@ -70,7 +82,7 @@ const Login = () => {
               {isError && <Alert message="이메일 혹은 비밀번호가 올바르지 않습니다." type="error" />}
               <div className="button">
                 <Form.Item>
-                  <Button type="primary" htmlType="submit" loading={isLogging}>
+                  <Button type="primary" htmlType="submit" loading={isLogging} onClick={clickLogin}>
                     로그인
                   </Button>
                 </Form.Item>
@@ -84,7 +96,7 @@ const Login = () => {
           </div> */}
           <div className="signup-button">
             <div>밥한끼가 처음이신가요?</div>
-            <Link to="/join" className="text">
+            <Link to="/join" className="text" onClick={clickMoveJoin}>
               <div> 회원가입 </div>
             </Link>
           </div>

@@ -40,6 +40,12 @@ const PostNew = () => {
         ...values,
         type: Number(type)
       });
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'create_post',
+        type: Number(type) === 1 ? 'share' : 'want'
+      })
   
       message.success("Submit success!");
 

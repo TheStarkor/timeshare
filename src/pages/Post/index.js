@@ -45,6 +45,15 @@ const Post = () => {
       });
   }, []);
 
+  const clickNewPost = (type) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'new_post',
+      type: type
+    })
+  }
+
+
   return (
     <>
       {isMobile && <Header />}
@@ -55,7 +64,7 @@ const Post = () => {
             {/* <div className="more">더보기</div> */}
           </div>
           <div className="postList-container">
-            <Link to="/post/1/new">
+            <Link to="/post/1/new" onClick={() => clickNewPost('share')}>
               <div className="plusCard-container">
                 <AiOutlinePlus size="40" color="#5A5A5A" />
               </div>
@@ -89,7 +98,7 @@ const Post = () => {
             {/* <div className="more">더보기</div> */}
           </div>
           <div className="postList-container">
-            <Link to="/post/2/new">
+            <Link to="/post/2/new" onClick={() => {clickNewPost('want')}}>
               <div className="plusCard-container">
                 <AiOutlinePlus size="40" color="#5A5A5A" />
               </div>

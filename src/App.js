@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider as StoreProvider } from "react-redux";
 import axios from "axios";
@@ -10,8 +11,7 @@ import FontAwesome from "./commons/FontAwesome";
 import Router from "./router";
 import store from "./store";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
+
 
 function App() {
   const [cookies] = useCookies(["Authorization"]);
