@@ -57,10 +57,6 @@
 							align-items: flex-start; 
 							input[type=password] {
 								font-family: Arial, Helvetica, sans-serif;
-
-								&::placeholder {
-									font-family: NanumSquareR;
-								}
 							}
 							.ant-input-affix-wrapper {
 									width:70px;
