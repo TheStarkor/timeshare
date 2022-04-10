@@ -40,7 +40,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/one_bob_/" target="_blank">
               <InstagramOutlined />
             </a>
-            <a href="https://thestar.notion.site/d1d5f0acaee64a44a7364969d22b8de9" target="_blank">
+            <a href="https://onebob.oopy.io/" target="_blank">
               <MediumOutlined />
             </a>
             <a href="mailto:support@onebob.co" target="_blank">
@@ -55,7 +55,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/one_bob_/" target="_blank">
               <InstagramOutlined />
             </a>
-            <a href="https://thestar.notion.site/d1d5f0acaee64a44a7364969d22b8de9" target="_blank">
+            <a href="https://onebob.oopy.io/" target="_blank">
               <MediumOutlined />
             </a>
             <a href="mailto:support@onebob.co" target="_blank">
