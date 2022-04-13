@@ -186,6 +186,8 @@ const PostShow = () => {
             ) : (
               <>
                 <div className="showForm-bottom">
+                  <h1 className="showForm-title2">{post?.User?.name}님 <span className="blue-point">밥한끼</span> 하실래요?</h1>
+
                   <Form
                     form={form}
                     layout="vertical"
