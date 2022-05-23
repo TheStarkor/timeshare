@@ -1,7 +1,7 @@
 @import "../../pages/mixins";
 
-@include desktop{
-	.mypage-container{
+@include desktop {
+	.mypage-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -10,42 +10,49 @@
 		font-size: 14px;
 
 		padding-bottom: 80px;
-		.mypage-title{
+
+		.mypage-title {
 			font-family: NanumSquareEB;
 			font-size: 16px;
 			margin: 60px 0 30px 0;
 		}
-		.mypage-box{
-			width:900px;
+
+		.mypage-box {
+			width: 900px;
 			display: flex;
 			flex-direction: column;
-			.mypage-profile-container{
+
+			.mypage-profile-container {
 				display: flex;
-				
-				.image{
+
+				.image {
 					height: 180px;
 					width: 180px;
 					object-fit: cover;
 					border-radius: 10px;
 					margin-right: 40px;
 				}
-				.mypage-profile-name{
+
+				.mypage-profile-name {
 					font-family: NanumSquareB;
 					font-size: 24px;
 					margin-bottom: 20px;
 				}
-				.mypage-profile-sentence{
+
+				.mypage-profile-sentence {
 					display: flex;
-					.mypage-profile-bold{
+
+					.mypage-profile-bold {
 						font-family: NanumSquareB;
 						margin-right: 40px;
-						
+
 						height: 80px;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
 					}
-					.mypage-profile-content{
+
+					.mypage-profile-content {
 						height: 80px;
 						display: flex;
 						flex-direction: column;
@@ -53,49 +60,57 @@
 					}
 				}
 			}
-			.request-sentence{
+
+			.request-sentence {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 				width: 100%;
 				margin-bottom: 20px;
 				margin-left: 10px;
+
 				// padding-bottom: 12px;
 				// border-bottom: solid 1px #f5f5f5;
-				.request-bold{
+				.request-bold {
 					width: 80%;
 					font-family: NanumSquareR;
-					
+
 				}
-				.request-button{
+
+				.request-button {
 					display: flex;
 				}
-				.request-status{
+
+				.request-status {
 					padding: 4px 12px;
 					border-radius: 20px;
-					// border: solid 1px #2257f6;
-					color:#2257F6;
+					// border: solid 1px #007aff;
+					color: #007aff;
 				}
-				.red{
+
+				.red {
 					color: red;
 				}
-				.green{
+
+				.green {
 					color: green;
 				}
-				.ant-btn-background-ghost.ant-btn-primary{
-					color: #2257F6;
-					border-color: #2257F6;
+
+				.ant-btn-background-ghost.ant-btn-primary {
+					color: #007aff;
+					border-color: #007aff;
 				}
 			}
-			.mypage-list-container{
+
+			.mypage-list-container {
 				display: flex;
 			}
 		}
 	}
 }
 
-@include tablet{
-	.mypage-container{
+@include tablet {
+	.mypage-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -104,42 +119,49 @@
 		font-size: 14px;
 
 		padding-bottom: 80px;
-		.mypage-title{
+
+		.mypage-title {
 			font-family: NanumSquareEB;
 			font-size: 16px;
 			margin: 60px 0 30px 0;
 		}
-		.mypage-box{
-			width:900px;
+
+		.mypage-box {
+			width: 900px;
 			display: flex;
 			flex-direction: column;
-			.mypage-profile-container{
+
+			.mypage-profile-container {
 				display: flex;
-				
-				.image{
+
+				.image {
 					height: 180px;
 					width: 180px;
 					object-fit: cover;
 					border-radius: 10px;
 					margin-right: 40px;
 				}
-				.mypage-profile-name{
+
+				.mypage-profile-name {
 					font-family: NanumSquareB;
 					font-size: 24px;
 					margin-bottom: 20px;
 				}
-				.mypage-profile-sentence{
+
+				.mypage-profile-sentence {
 					display: flex;
-					.mypage-profile-bold{
+
+					.mypage-profile-bold {
 						font-family: NanumSquareB;
 						margin-right: 40px;
-						
+
 						height: 80px;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
 					}
-					.mypage-profile-content{
+
+					.mypage-profile-content {
 						height: 80px;
 						display: flex;
 						flex-direction: column;
@@ -147,49 +169,57 @@
 					}
 				}
 			}
-			.request-sentence{
+
+			.request-sentence {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 				width: 100%;
 				margin-bottom: 20px;
 				margin-left: 10px;
+
 				// padding-bottom: 12px;
 				// border-bottom: solid 1px #f5f5f5;
-				.request-bold{
+				.request-bold {
 					width: 80%;
 					font-family: NanumSquareR;
-					
+
 				}
-				.request-button{
+
+				.request-button {
 					display: flex;
 				}
-				.request-status{
+
+				.request-status {
 					padding: 4px 12px;
 					border-radius: 20px;
-					// border: solid 1px #2257f6;
-					color:#2257F6;
+					// border: solid 1px #007aff;
+					color: #007aff;
 				}
-				.red{
+
+				.red {
 					color: red;
 				}
-				.green{
+
+				.green {
 					color: green;
 				}
-				.ant-btn-background-ghost.ant-btn-primary{
-					color: #2257F6;
-					border-color: #2257F6;
+
+				.ant-btn-background-ghost.ant-btn-primary {
+					color: #007aff;
+					border-color: #007aff;
 				}
 			}
-			.mypage-list-container{
+
+			.mypage-list-container {
 				display: flex;
 			}
 		}
 	}
 }
 
-@include mobile{
-	.mypage-container{
+@include mobile {
+	.mypage-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -198,61 +228,70 @@
 		font-size: 14px;
 
 		padding-bottom: 80px;
-		.mypage-header{
+
+		.mypage-header {
 			font-family: NanumSquareB;
-				font-size: 16px;
-				z-index: 1;
-				position: fixed;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: flex-end;
-				margin-bottom: 20px;
-				padding-bottom: 20px;
-				width: 100%;
-				height:105px;
-				background: white;
-				border-bottom: solid 1px #f1f1f1;
+			font-size: 16px;
+			z-index: 1;
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+			width: 100%;
+			height: 105px;
+			background: white;
+			border-bottom: solid 1px #f1f1f1;
 		}
-		.mypage-title{
+
+		.mypage-title {
 			font-family: NanumSquareB;
 			font-size: 14px;
 			margin-bottom: 20px;
 		}
-		.mypage-box{
-			width:100%;
+
+		.mypage-box {
+			width: 100%;
 			display: flex;
 			flex-direction: column;
-			.mypage-profile-container{
+
+			.mypage-profile-container {
 				display: flex;
 				flex-direction: column;
-				padding:30px 30px;
+				padding: 30px 30px;
 				margin-top: 105px;
 				border-bottom: solid 1px #f1f1f1;
-				.image{
+
+				.image {
 					height: 94px;
 					width: 94px;
 					object-fit: cover;
 					border-radius: 10px;
 					margin-right: 40px;
 				}
-				.mypage-profile-name{
+
+				.mypage-profile-name {
 					font-family: NanumSquareEB;
 					font-size: 18px;
 					margin: 30px 0 20px 0;
 				}
-				.mypage-profile-sentence{
+
+				.mypage-profile-sentence {
 					display: flex;
-					.mypage-profile-bold{
+
+					.mypage-profile-bold {
 						font-family: NanumSquareB;
 						margin-right: 40px;
-						
+
 						height: 80px;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
 					}
-					.mypage-profile-content{
+
+					.mypage-profile-content {
 						height: 80px;
 						display: flex;
 						flex-direction: column;
@@ -260,66 +299,77 @@
 					}
 				}
 			}
-			.mypage-request-container{
+
+			.mypage-request-container {
 				display: flex;
 				flex-direction: column;
-				padding:30px 30px;
-				border-bottom: solid 1px #f1f1f1;	
-				.request-sentence{
+				padding: 30px 30px;
+				border-bottom: solid 1px #f1f1f1;
+
+				.request-sentence {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
 					width: 100%;
 					margin-bottom: 15px;
+
 					// padding-bottom: 12px;
 					// border-bottom: solid 1px #f5f5f5;
-					.request-bold{
+					.request-bold {
 						width: 65%;
 						font-family: NanumSquareR;
-						
+
 					}
-					.request-status{
+
+					.request-status {
 						font-size: 12px;
 						padding: 2px 8px;
 						border-radius: 20px;
-						// border: solid 1px #2257f6;
-						// color:#2257F6;
-						color:#555;
+						// border: solid 1px #007aff;
+						// color:#007aff;
+						color: #555;
 					}
-					.red{
-						color:#aaa;
+
+					.red {
+						color: #aaa;
 					}
-					.green{
+
+					.green {
 						color: green;
 					}
-					.request-buttons{
+
+					.request-buttons {
 						display: flex;
-						.ant-btn-background-ghost.ant-btn-primary{
-							color: #2257F6;
-							border-color: #2257F6;
+
+						.ant-btn-background-ghost.ant-btn-primary {
+							color: #007aff;
+							border-color: #007aff;
 							font-size: 12px;
-							padding:0 10px;
+							padding: 0 10px;
 						}
-						.ant-btn-background-ghost.ant-btn-danger{
+
+						.ant-btn-background-ghost.ant-btn-danger {
 							color: red;
 							border-color: red;
 							font-size: 12px;
-							padding:0 8px;
+							padding: 0 8px;
 						}
 					}
-					
+
 				}
 			}
-			.mypage-post-container{
+
+			.mypage-post-container {
 				flex-direction: column;
-				padding:30px 30px;
-				border-bottom: solid 1px #f1f1f1;	
+				padding: 30px 30px;
+				border-bottom: solid 1px #f1f1f1;
 				display: flex;
-				.mypage-list-container{
-					display: flex;				
+
+				.mypage-list-container {
+					display: flex;
 				}
 			}
-			
+
 		}
 	}
 }

@@ -44,7 +44,6 @@ const Landing = () => {
               선배님,<br />
               <span className="highlight">밥 한끼 </span>
               하실래요?
-              <img className="landing0_image" src="https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644694766874%E1%84%87%E1%85%A1%E1%86%B8.png" />
             </div>
             <div className="landing0_text2">
               직접 만나 대화를 하고 싶은 선배와 밥 한끼 함께 해요!
@@ -63,7 +62,7 @@ const Landing = () => {
               <div>학번 차이가 많이 나는 선배들은 연락하기 부담스러웠던 적이 있으신가요?</div>
             </div>
             {isMobile
-              ? <img className="landing1_image" height='180' src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644927762932%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%86%E1%85%A9%E1%84%87%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF2%20%E1%84%92%E1%85%AA%E1%84%8C%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%A5%E1%86%B8.png' />
+              ? <img className="landing1_image" height='200' src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644927762932%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%86%E1%85%A9%E1%84%87%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF2%20%E1%84%92%E1%85%AA%E1%84%8C%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%A5%E1%86%B8.png' />
               : <img className="landing1_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644694175726%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC1-2.png' />
             }
           </div>
@@ -86,8 +85,8 @@ const Landing = () => {
 
             </div>
             {isMobile
-              ? <img className="landing2_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644928174161%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC%20%E1%84%86%E1%85%A9%E1%84%87%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%203.png' />
-              : <img className="landing2_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644692461098%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC2.png' />}
+              ? <img className="landing2_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1653314843433Group%20151.png' />
+              : <img className="landing2_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1653312797885second_image.png' />}
 
           </div>
         </div>
@@ -98,7 +97,7 @@ const Landing = () => {
               <div className="landing3_text_container">
                 <div className="landing3_text1">그래서, ‘밥한끼’가 뭔가요?</div>
                 <div className="landing3_image_container">
-                  <img className="landing3_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644693190285%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC3.png' />
+                  <img className="landing3_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1653312464096main%20page_face.png' />
                 </div>
                 <div>재학 중이거나 졸업한 선후배를</div>
                 <div>연결해주는 소셜링 서비스에요. </div>
@@ -122,7 +121,7 @@ const Landing = () => {
                   간단한 티타임, 밥 시간을 이용해 선배들을 만나보세요!<br />
                 </div>
               </div>
-              <img className="landing3_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644693190285%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC3.png' />
+              <img className="landing3_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1653312464096main%20page_face.png' />
 
             </>
           }
@@ -135,7 +134,7 @@ const Landing = () => {
                 <div className="landing4_text1">어떻게 시작하나요?</div>
                 <div className="landing4_image_container">
                   <img className="landing4_image" src='https://tmi-image.s3.ap-northeast-2.amazonaws.com/profile/1644693423115%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC4.png' />
-                </div>                  
+                </div>
                 <div>회원가입 이후에 선배를 찾고</div>
                 <div>티타임을 요청하면 끝</div>
                 <div className="landing4_text2">

@@ -1,4 +1,4 @@
-.pc-container{
+.pc-container {
     font-size: 15px;
     width: 100%;
     text-align: center;
@@ -7,17 +7,21 @@
     display: flex;
     color: rgb(121, 121, 121);
     background-color: rgb(255, 255, 255);
-    .anticon{
-        svg{
+
+    .anticon {
+        svg {
             font-size: 20px;
             margin-right: 20px;
             color: gray;
-            &:hover {color: #2257F6;}
+
+            &:hover {
+                color: #007aff;
+            }
         }
     }
 }
 
-.mobile-container{
+.mobile-container {
     font-size: 15px;
     text-align: center;
     padding: 50px;
@@ -25,11 +29,12 @@
     display: flex;
     color: rgb(121, 121, 121);
     background-color: rgb(255, 255, 255);
-    .anticon{
-        svg{
+
+    .anticon {
+        svg {
             font-size: 20px;
             margin-right: 20px;
-            color:gray;
+            color: gray;
         }
     }
 }

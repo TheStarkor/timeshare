@@ -1,137 +1,154 @@
 @import "../../pages/mixins";
 
-@include desktop{
-	.showForm-container{
+@include desktop {
+	.showForm-container {
 		display: flex;
-		height:calc(100vh - 85px);
+		height: calc(100vh - 85px);
 		padding-bottom: 40px;
 		justify-content: center;
 		align-items: center;
 
 		font-family: NanumSquareR;
-		
-		.showForm-box{
-			width:1000px;
+
+		.showForm-box {
+			width: 1000px;
 			border-radius: 20px;
-			padding:50px;
+			padding: 50px;
 			background: white;
-			box-shadow: 0px 0px 16px 10px #00000008; 
+			box-shadow: 0px 0px 16px 10px #00000008;
 			display: flex;
 			flex-direction: column;
-			.showForm-title{
+
+			.showForm-title {
 				font-family: NanumSquareEB;
 				font-size: 16px;
-				padding-bottom:20px;
+				padding-bottom: 20px;
 				margin-bottom: 35px;
 				border-bottom: solid 1px #c4c4c4;
 			}
-			
-			.showForm-top{
+
+			.showForm-top {
 				display: flex;
 				color: #5a5a5a;
-				.title-and-detail{
-					width:60%;
+
+				.title-and-detail {
+					width: 60%;
 					// height: 100%;
 					// display: flex;
 					// flex-direction: column;
 					// justify-content: space-between;
-					padding-right:20px;
+					padding-right: 20px;
 					border-right: solid 1px #c4c4c4;
-					.showForm-title-container{
+
+					.showForm-title-container {
 						display: flex;
 						align-items: center;
-						.showForm-title2{
+
+						.showForm-title2 {
 							font-family: NanumSquareB;
 							font-size: 20px;
 						}
-						.showForm-status{
+
+						.showForm-status {
 							background: #5FB687;
-							width:70px;
+							width: 70px;
 							display: flex;
 							justify-content: center;
-							color:white;
+							color: white;
 							font-size: 12px;
-							padding:3px 12px;
+							padding: 3px 12px;
 							border-radius: 20px;
 							margin-left: 20px;
 						}
 					}
-					.showForm-info{
+
+					.showForm-info {
 						margin: 40px 0;
-						color:#5a5a5a;
+						color: #5a5a5a;
 					}
-					.showForm-tag{
+
+					.showForm-tag {
 						margin-bottom: 20px;
 					}
-					.showForm-price{
-						color:#2257F6;
+
+					.showForm-price {
+						color: #007aff;
 						font-family: NanumSquareB;
 						margin-bottom: 20px;
-						border:solid 2px #2257F6;
+						border: solid 2px #007aff;
 						padding: 8px 20px;
 						border-radius: 8px;
 						width: 150px;
 						text-align: center;
 					}
 				}
-				.writer-info{
+
+				.writer-info {
 					width: 40%;
 					padding-left: 30px;
-					.info-title{
+
+					.info-title {
 						font-family: NanumSquareB;
 						font-size: 14px;
 						margin-bottom: 6px;
 					}
-					.info-text{
+
+					.info-text {
 						margin-bottom: 16px;
 						margin-left: 10px;
 					}
-					.info-image-container{
+
+					.info-image-container {
 						display: flex;
 						flex-direction: column;
 						width: 100%;
 						align-items: center;
-						.info-image{
+
+						.info-image {
 							width: 120px;
-							height:120px;
+							height: 120px;
 							background: #f0f0f0;
 							border-radius: 16px;
 							object-fit: cover;
 						}
-						.info-text{
-							margin-top:10px;
+
+						.info-text {
+							margin-top: 10px;
 						}
 					}
 				}
 			}
 
-			.showForm-bottom{
-				
-				.showForm-title2{
+			.showForm-bottom {
+
+				.showForm-title2 {
 					font-family: NanumSquareB;
 					font-size: 18px;
 					margin-bottom: 0px;
 					margin-top: 10px;
-					span{
+
+					span {
 						color: #007aff;
 					}
 				}
 
-				.showForm-bottom-title{
-					font-family: NanumSquareB;	
+				.showForm-bottom-title {
+					font-family: NanumSquareB;
 					font-size: 12px;
 					margin-bottom: 12px;
 				}
-				.showForm-tag{
-					font-family: NanumSquareR;	
+
+				.showForm-tag {
+					font-family: NanumSquareR;
 					font-size: 12px;
 					margin-bottom: 20px;
 				}
-				.showForm-price{
-					color:white;
+
+				.showForm-price {
+					color: white;
 					font-family: NanumSquareR;
-					
-					background-color: #2257F6;
+
+					background-color: #007aff;
 					padding: 8px 12px;
 					border-radius: 5px;
 					width: 120px;
@@ -139,238 +156,268 @@
 				}
 			}
 
-			.ant-input{
+			.ant-input {
 				width: 100%;
 				border-radius: 8px;
 				padding: 8px 12px;
-				margin-top: 30px ;
+				margin-top: 30px;
 			}
-			.ant-form-item-control-input-content{
+
+			.ant-form-item-control-input-content {
 				display: flex;
 				justify-content: end;
-				.ant-btn-primary{
+
+				.ant-btn-primary {
 					width: 100px;
-					height:48px;
-					border-color: #2257F6;
-					background: #2257F6;
+					height: 48px;
+					border-color: #007aff;
+					background: #007aff;
 					border-radius: 8px;
 					padding: 4px 18px;
 				}
-				.ant-btn-secondary{
+
+				.ant-btn-secondary {
 					width: 100px;
-					height:48px;
+					height: 48px;
 					background: white;
 					border-radius: 8px;
-					border:solid 1px #2257f6;
-					color:#2257f6;
+					border: solid 1px #007aff;
+					color: #007aff;
 					padding: 4px 18px;
-					box-shadow: 0 0 0 ;
+					box-shadow: 0 0 0;
 					margin-right: 10px;
 				}
 			}
-			.showForm-button{
-				background:#2257F6;
-				border-radius: 8px;			
+
+			.showForm-button {
+				background: #007aff;
+				border-radius: 8px;
 				padding: 8px 0;
 				margin-top: 20px;
 				width: 100px;
 				align-self: flex-end;
 				text-align: center;
-				color:white;
-				a{
+				color: white;
+
+				a {
 					color: white;
 					font-family: NanumSquareR;
 				}
-			}		
+			}
 		}
 	}
 }
 
-@include tablet{
-	.showForm-container{
+@include tablet {
+	.showForm-container {
 		display: flex;
-		height:calc(100vh - 85px);
+		height: calc(100vh - 85px);
 		padding-bottom: 40px;
 		justify-content: center;
 		align-items: center;
 
 		font-family: NanumSquareR;
-		.showForm-box{
-			width:1000px;
+
+		.showForm-box {
+			width: 1000px;
 			border-radius: 20px;
-			padding:50px;
+			padding: 50px;
 			background: white;
-			box-shadow: 0px 0px 16px 10px #00000008; 
+			box-shadow: 0px 0px 16px 10px #00000008;
 			display: flex;
 			flex-direction: column;
-			.showForm-title{
+
+			.showForm-title {
 				font-family: NanumSquareEB;
 				font-size: 16px;
-				padding-bottom:20px;
+				padding-bottom: 20px;
 				margin-bottom: 35px;
 				border-bottom: solid 1px #c4c4c4;
 			}
-			
-			.showForm-top{
+
+			.showForm-top {
 				display: flex;
 				color: #5a5a5a;
-				.title-and-detail{
-					width:60%;
+
+				.title-and-detail {
+					width: 60%;
 					// height: 100%;
 					// display: flex;
 					// flex-direction: column;
 					// justify-content: space-between;
-					padding-right:20px;
+					padding-right: 20px;
 					border-right: solid 1px #c4c4c4;
-					.showForm-title-container{
+
+					.showForm-title-container {
 						display: flex;
 						align-items: center;
-						.showForm-title2{
+
+						.showForm-title2 {
 							font-family: NanumSquareB;
 							font-size: 20px;
 						}
-						.showForm-status{
+
+						.showForm-status {
 							background: #5FB687;
-							width:70px;
+							width: 70px;
 							display: flex;
 							justify-content: center;
-							color:white;
+							color: white;
 							font-size: 12px;
-							padding:3px 0;
+							padding: 3px 0;
 							border-radius: 20px;
 							margin-left: 20px;
 						}
 					}
-					.showForm-info{
+
+					.showForm-info {
 						margin: 40px 0;
-						color:#5a5a5a;
+						color: #5a5a5a;
 					}
-					.showForm-tag{
+
+					.showForm-tag {
 						margin-bottom: 20px;
 					}
-					.showForm-price{
-						color:#2257F6;
+
+					.showForm-price {
+						color: #007aff;
 						font-family: NanumSquareB;
 						margin-bottom: 20px;
-						border:solid 2px #2257F6;
+						border: solid 2px #007aff;
 						padding: 8px 20px;
 						border-radius: 8px;
 						width: 150px;
 						text-align: center;
 					}
 				}
-				.writer-info{
+
+				.writer-info {
 					width: 40%;
 					padding-left: 30px;
-					.info-title{
+
+					.info-title {
 						font-family: NanumSquareB;
 						font-size: 14px;
 						margin-bottom: 6px;
 					}
-					.info-text{
+
+					.info-text {
 						margin-bottom: 16px;
 						margin-left: 10px;
 					}
-					.info-image-container{
+
+					.info-image-container {
 						display: flex;
 						flex-direction: column;
 						width: 100%;
 						align-items: center;
-						.info-image{
+
+						.info-image {
 							width: 120px;
-							height:120px;
+							height: 120px;
 							background: #f0f0f0;
 							border-radius: 16px;
 							object-fit: cover;
 						}
-						.info-text{
-							margin-top:10px;
+
+						.info-text {
+							margin-top: 10px;
 						}
 					}
 				}
 			}
-			.showForm-bottom{
-				
-				.showForm-title2{
+
+			.showForm-bottom {
+
+				.showForm-title2 {
 					font-family: NanumSquareB;
 					font-size: 18px;
 					margin-bottom: 0px;
 					margin-top: 10px;
-					span{
+
+					span {
 						color: #007aff;
 					}
 				}
 
-				.showForm-bottom-title{
-					font-family: NanumSquareB;	
+				.showForm-bottom-title {
+					font-family: NanumSquareB;
 					font-size: 12px;
 					margin-bottom: 12px;
 				}
-				.showForm-tag{
-					font-family: NanumSquareR;	
+
+				.showForm-tag {
+					font-family: NanumSquareR;
 					font-size: 12px;
 					margin-bottom: 20px;
 				}
-				.showForm-price{
-					color:white;
+
+				.showForm-price {
+					color: white;
 					font-family: NanumSquareR;
-					
-					background-color: #2257F6;
+
+					background-color: #007aff;
 					padding: 8px 12px;
 					border-radius: 5px;
 					width: 120px;
 					text-align: center;
 				}
 			}
-			.ant-input{
+
+			.ant-input {
 				width: 100%;
 				border-radius: 8px;
 				padding: 8px 12px;
-				margin-top: 30px ;
+				margin-top: 30px;
 			}
-			.ant-form-item-control-input-content{
+
+			.ant-form-item-control-input-content {
 				display: flex;
 				justify-content: end;
-				.ant-btn-primary{
+
+				.ant-btn-primary {
 					width: 100px;
-					height:48px;
-					border-color: #2257F6;
-					background: #2257F6;
+					height: 48px;
+					border-color: #007aff;
+					background: #007aff;
 					border-radius: 8px;
 					padding: 4px 18px;
 				}
-				.ant-btn-secondary{
+
+				.ant-btn-secondary {
 					width: 100px;
-					height:48px;
+					height: 48px;
 					background: white;
 					border-radius: 8px;
-					border:solid 1px #2257f6;
-					color:#2257f6;
+					border: solid 1px #007aff;
+					color: #007aff;
 					padding: 4px 18px;
-					box-shadow: 0 0 0 ;
+					box-shadow: 0 0 0;
 					margin-right: 10px;
 				}
 			}
-			.showForm-button{
-				background:#2257F6;
-				border-radius: 8px;			
+
+			.showForm-button {
+				background: #007aff;
+				border-radius: 8px;
 				padding: 8px 0;
 				margin-top: 20px;
 				width: 100px;
 				align-self: flex-end;
 				text-align: center;
-				color:white;
-				a{
+				color: white;
+
+				a {
 					color: white;
 					font-family: NanumSquareR;
 				}
-			}		
+			}
 		}
 	}
 }
 
-@include mobile{
-	.showForm-container{
+@include mobile {
+	.showForm-container {
 		display: flex;
 		width: 100vw;
 		padding-bottom: 40px;
@@ -378,9 +425,11 @@
 		align-items: center;
 
 		font-family: NanumSquareR;
-		color:#5A5A5A;
-		.showForm-box{
+		color: #5A5A5A;
+
+		.showForm-box {
 			width: 100vw;
+
 			// width:1000px;
 			// border-radius: 20px;
 			// padding:50px;
@@ -388,9 +437,9 @@
 			// box-shadow: 0px 0px 16px 10px #00000008; 
 			// display: flex;
 			// flex-direction: column;
-			.showForm-title{
+			.showForm-title {
 				font-family: NanumSquareB;
-				font-size: 16px;				
+				font-size: 16px;
 				z-index: 1;
 				position: fixed;
 				display: flex;
@@ -400,113 +449,127 @@
 				margin-bottom: 20px;
 				padding-bottom: 20px;
 				width: 100%;
-				height:105px;
+				height: 105px;
 				background: white;
 				border-bottom: solid 1px #f1f1f1;
 			}
-			
-			.showForm-top{
+
+			.showForm-top {
 				display: flex;
 				flex-direction: column;
 				margin-top: 105px;
 
-				.title-and-detail{
-					padding:30px 30px 30px 30px ;
+				.title-and-detail {
+					padding: 30px 30px 30px 30px;
 					border-bottom: solid 1px #f1f1f1;
-					.showForm-title-container{
+
+					.showForm-title-container {
 						display: flex;
 						align-items: flex-start;
-						
-						.showForm-title2{
+
+						.showForm-title2 {
 							font-family: NanumSquareB;
-							font-size: 18px;							
+							font-size: 18px;
 						}
-						.showForm-status{
+
+						.showForm-status {
 							background: #5FB687;
-							width:70px;
+							width: 70px;
 							display: flex;
 							justify-content: center;
-							color:white;
+							color: white;
 							font-size: 12px;
-							padding:3px 12px;
+							padding: 3px 12px;
 							border-radius: 20px;
 							margin-left: 16px;
 						}
 					}
-					.showForm-info{
+
+					.showForm-info {
 						margin: 30px 0;
 						font-family: NanumSquareR;
-					}					
+					}
 				}
 
-				.writer-info{
-					padding:30px 30px 20px 30px ;
+				.writer-info {
+					padding: 30px 30px 20px 30px;
 					border-bottom: solid 1px #f1f1f1;
 					font-size: 12px;
-					.info-title{
-						font-family: NanumSquareB;	
-						margin-right: 12px;	
-						display: flex;	
+
+					.info-title {
+						font-family: NanumSquareB;
+						margin-right: 12px;
+						display: flex;
 					}
 
-					.info-name-title{
-						font-family: NanumSquareR;	
-						margin-right: 8px;	
-						width: 50px;	
+					.info-name-title {
+						font-family: NanumSquareR;
+						margin-right: 8px;
+						width: 50px;
 						margin-bottom: 15px;
 					}
-					.info-body-title{
-						font-family: NanumSquareB;	
-						margin-right: 12px;	
-						width: 50px;	
+
+					.info-body-title {
+						font-family: NanumSquareB;
+						margin-right: 12px;
+						width: 50px;
 					}
-					.info-belong-title{
-						font-family: NanumSquareB;	
-						margin-right: 12px;	
-						width: 50px;	
+
+					.info-belong-title {
+						font-family: NanumSquareB;
+						margin-right: 12px;
+						width: 50px;
 					}
-					.info-body{
+
+					.info-body {
 						display: flex;
 						margin-top: 12px;
-						.info-image-container{
+
+						.info-image-container {
 							margin-right: 24px;
-							.info-image{
+
+							.info-image {
 								width: 72px;
-								height:72px;
+								height: 72px;
 								background: #f0f0f0;
 								border-radius: 10px;
 								object-fit: cover;
 							}
 						}
-						.info-sentence{
+
+						.info-sentence {
 							display: flex;
-							.info-text{
+
+							.info-text {
 								margin-bottom: 8px;
 								margin-right: 12px;
-							}							
+							}
 						}
 					}
 				}
 			}
 
-			.showForm-bottom{
-				padding:30px 30px 20px 30px ;
-				.showForm-bottom-title{
-					font-family: NanumSquareB;	
+			.showForm-bottom {
+				padding: 30px 30px 20px 30px;
+
+				.showForm-bottom-title {
+					font-family: NanumSquareB;
 					font-size: 12px;
 					margin-bottom: 12px;
 				}
-				.showForm-tag{
-					font-family: NanumSquareR;	
+
+				.showForm-tag {
+					font-family: NanumSquareR;
 					font-size: 12px;
 					margin-bottom: 20px;
 					margin-right: 10px;
 				}
-				.showForm-price{
-					color:white;
+
+				.showForm-price {
+					color: white;
 					font-family: NanumSquareR;
-					
-					background-color: #2257F6;
+
+					background-color: #007aff;
 					padding: 8px 12px;
 					border-radius: 5px;
 					width: 120px;
@@ -514,45 +577,47 @@
 				}
 			}
 
-			.ant-input{
+			.ant-input {
 				border-radius: 8px;
 				padding: 8px 12px;
 				margin: 30px 0;
 			}
 
-			.ant-btn-primary{
+			.ant-btn-primary {
 				width: 100%;
-				height:54px;
-				border-color: #2257F6;
-				background: #2257F6;
+				height: 54px;
+				border-color: #007aff;
+				background: #007aff;
 				border-radius: 8px;
 				padding: 4px 18px;
 			}
-			.ant-btn-secondary{
+
+			.ant-btn-secondary {
 				border-width: 0;
 				width: 100%;
 				height: 54px;
 				background: white;
 				border-radius: 8px;
-				color:#2257f6;
+				color: #007aff;
 				padding: 4px 18px;
-				box-shadow: 0 0 0 ;
+				box-shadow: 0 0 0;
 			}
 
-			.showForm-button{
-				background:#2257F6;
-				border-radius: 8px;			
+			.showForm-button {
+				background: #007aff;
+				border-radius: 8px;
 				padding: 8px 0;
 				margin-top: 20px;
 				width: 100px;
 				align-self: flex-end;
 				text-align: center;
-				color:white;
-				a{
+				color: white;
+
+				a {
 					color: white;
 					font-family: NanumSquareR;
 				}
-			}		
+			}
 		}
 	}
 }
